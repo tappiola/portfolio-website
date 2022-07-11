@@ -2,16 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-/*body {*/
-/*  margin: 0;*/
-/*  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',*/
-/*    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',*/
-/*    sans-serif;*/
-/*  -webkit-font-smoothing: antialiased;*/
-/*  -moz-osx-font-smoothing: grayscale;*/
-/*}*/
+@font-face {
+    font-family: 'Roboto-Mono';
+    src: url('./fonts/RobotoMono.ttf');
+    font-weight: normal;
+}
 
-/*code {*/
-/*  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',*/
-/*    monospace;*/
-/*}*/
+@font-face {
+    font-family: 'Ubuntu-Regular';
+    src: url('./fonts/Ubuntu-Regular.ttf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Kanit';
+    src: url('./fonts/Kanit-Regular.ttf');
+    font-weight: normal;
+}
+
+h1 {
+    font-family: "Kanit", sans-serif;
+}
+

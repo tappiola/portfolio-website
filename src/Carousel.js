@@ -1,10 +1,4 @@
-import ondat1 from "./screenshots/ondat1.png";
-import ondat2 from "./screenshots/ondat2.png";
-import ondat3 from "./screenshots/ondat3.png";
-import ondat4 from "./screenshots/ondat4.png";
-import ondat5 from "./screenshots/ondat5.png";
-
-export const Carousel = () => {
+export const Carousel = ({images}) => {
     return <div id="carouselExampleIndicators" className="carousel slide relative" data-bs-ride="carousel">
             <div className="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
                 <button
@@ -28,42 +22,14 @@ export const Carousel = () => {
                     aria-label="Slide 3"
                 />
             </div>
-            <div className="carousel-inner relative w-full overflow-hidden">
-                <div className="carousel-item active float-left w-full">
+            <div className="carousel-inner rounded-t-2xl relative w-full overflow-hidden">
+                {images.map((image, i) => <div className={`carousel-item ${i === 0 ? 'active' : ''} float-left w-full`}>
                     <img
-                        src={ondat1}
+                        src={image}
                         className="block w-full"
                         alt="Wild Landscape"
                     />
-                </div>
-                <div className="carousel-item float-left w-full">
-                    <img
-                        src={ondat2}
-                        className="block w-full"
-                        alt="Camera"
-                    />
-                </div>
-                <div className="carousel-item float-left w-full">
-                    <img
-                        src={ondat3}
-                        className="block w-full"
-                        alt="Exotic Fruits"
-                    />
-                </div>
-                <div className="carousel-item float-left w-full">
-                    <img
-                        src={ondat4}
-                        className="block w-full"
-                        alt="Exotic Fruits"
-                    />
-                </div>
-                <div className="carousel-item float-left w-full">
-                    <img
-                        src={ondat5}
-                        className="block w-full"
-                        alt="Exotic Fruits"
-                    />
-                </div>
+                </div>)}
             </div>
             <button
                 className="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
