@@ -1,12 +1,12 @@
 
-export const Pills = ({pills}) => {
-    return <div>{pills.map((p, i) => <p className={`rounded-3xl
-        px-2
+export const Pills = ({pills, color}) => {
+    return <>{pills.map((p) => <p className={`rounded-3xl
+      px-2
       py-0.5
       my-2
       mr-2
-    ${ i > 5 ? 'text-teal-500' : 'text-lime-500'}
-    ${ i > 5 ? 'border-teal-500' : 'border-lime-500'}
+      text-${color}
+      border-${color}
       border-2
       text-xs
       uppercase
@@ -17,5 +17,5 @@ export const Pills = ({pills}) => {
       `}>
         {p}
         </p>
-    )}</div>
+    )}</>
 }
