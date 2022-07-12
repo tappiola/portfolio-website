@@ -76,7 +76,7 @@ const recentPosts = [
 
 const headerLinks = [
     {name: 'Projects', anchor: '#projects'},
-    {name: 'Testonomials', anchor: '#testonomials'},
+    {name: 'Testimonials', anchor: '#testimonials'},
     {name: 'Contacts', anchor: '#contacts'},
 ]
 
