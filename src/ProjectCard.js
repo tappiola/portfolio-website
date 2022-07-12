@@ -13,7 +13,7 @@ export const ProjectCard = ({project, project: {screenshot, title, description, 
         </div>
         <div className="pl-20">
             <h1 className="text-stone-300 text-4xl my-3">{title}</h1>
-            {description.map(p => <p className="text-stone-300 mb-4 last:mb-0">{p}</p>)}
+            {description.map((p, i) => <p key={i} className="text-stone-300 mb-4 last:mb-0">{p}</p>)}
             <div className="my-5">
                 <Pills pills={pillsFe} color="lime"/>
                 <Pills pills={pillsBe} color="teal"/>

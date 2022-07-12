@@ -7,6 +7,7 @@ import stocks from './screenshots/stocks.png';
 import tasks from './screenshots/tasks.png';
 import scandipwa from './screenshots/scandipwa.png';
 import codenames from './screenshots/codenames.png';
+import {SectionTitle} from "./SectionTitle";
 
 const PROJECTS = [
     {
@@ -85,10 +86,12 @@ const PROJECTS = [
 ];
 
 export const Projects = () => {
-    return (
-        <div id='projects'>
-            {PROJECTS.map(project => <ProjectCard project={project} />)}
-        </div>
+    return (<>
+            <SectionTitle>Selected projects</SectionTitle>
+            <div id='projects'>
+                {PROJECTS.map(project => <ProjectCard key={project.title} project={project} />)}
+            </div>
+        </>
     )
 }
 

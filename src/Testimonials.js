@@ -1,3 +1,5 @@
+import {SectionTitle} from "./SectionTitle";
+
 export const Testimonial = ({active}) => {
     return <div className={`carousel-item relative float-left w-full ${active ? 'active': ''}`}>
         <div className="flex flex-wrap justify-center">
@@ -74,7 +76,7 @@ export const Testimonials = () => {
 
         <section className="mb-32 text-gray-800 text-center">
 
-            <h2 className="text-3xl font-bold mb-12 text-indigo-300">Testimonials</h2>
+            <SectionTitle>Testimonials</SectionTitle>
 
             <div id="carouselExampleCaptions" className="carousel slide relative carousel-dark" data-bs-ride="carousel">
                 <div className="carousel-inner relative w-full overflow-hidden">

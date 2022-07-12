@@ -1,5 +1,5 @@
 export const Pills = ({pills, color}) => {
-    return <>{pills.map((p) => <p className={`rounded-3xl
+    return <>{pills.map((p) => <p key={p} className={`rounded-3xl
       px-2
       py-0.5
       my-2
