@@ -20,7 +20,7 @@ export default function Header() {
                 </div>
                 <div>
                     {headerLinks.map(l => (
-                        <a href={l.anchor} className="text-base font-medium text-gray-500 hover:text-indigo-600 px-10">
+                        <a key={l.name} href={l.anchor} className="text-base font-medium text-gray-500 hover:text-indigo-600 px-10">
                             {l.name}
                         </a>
                     ))}

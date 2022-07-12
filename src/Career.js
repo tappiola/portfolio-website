@@ -43,7 +43,7 @@ export const Career = () => {
     return <>
         <SectionTitle>My Career</SectionTitle>
     <ol className="border-l border-gray-300 m-10">
-        {WORKPLACES.map((work) => <PlaceOfWork key={work.title} work={work}/> )}
+        {WORKPLACES.map((work) => <PlaceOfWork key={work.company} work={work}/> )}
     </ol>
         </>
 }
