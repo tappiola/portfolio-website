@@ -7,13 +7,13 @@ export const ProjectCard = ({project, project: {screenshot, title, description, 
         <div className="block basis-2/5 shrink-0">
             <img
                 src={screenshot}
-                className="block object-cover ratio-16/9"
+                className="block object-cover aspect-video opacity-70 grayscale-30 hover:opacity-100 hover:filter-none object-center-top"
                 alt="Wild Landscape"
             />
         </div>
         <div className="pl-20">
-            <h1 className="text-stone-300 text-4xl my-3">{title}</h1>
-            {description.map((p, i) => <p key={i} className="text-stone-300 mb-4 last:mb-0">{p}</p>)}
+            <h1 className="text-stone-300 text-4xl mb-3">{title}</h1>
+            {description.map((p, i) => <p key={i} className="text-stone-400 mb-4 last:mb-0">{p}</p>)}
             <div className="my-5">
                 <Pills pills={pillsFe} color="lime"/>
                 <Pills pills={pillsBe} color="teal"/>

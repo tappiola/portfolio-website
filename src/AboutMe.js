@@ -1,8 +1,8 @@
 import {AboutMeSection} from "./AboutMeSection";
 import backend from './screenshots/back-end-developer.png';
 import soft from './screenshots/soft.png';
-import react from './screenshots/react.jpeg';
-import quality from './screenshots/quality.jpeg';
+import react from './screenshots/react6.png';
+import quality from './screenshots/quality2.png';
 import css from './screenshots/css.png';
 
 const ABOUT_ME = [
