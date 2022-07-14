@@ -73,6 +73,6 @@ const ABOUT_ME = [
 
 export const AboutMe = () => {
     return <div className="text-stone-200 px-10 flex flex-wrap justify-center">
-        {ABOUT_ME.map(({title, features, image}) => <AboutMeSection key={title} title={title} features={features} img={image}/> )}
+        {ABOUT_ME.map(({title, features, image}, index) => <AboutMeSection key={title} title={title} features={features} img={image} index={index}/> )}
     </div>
 }
