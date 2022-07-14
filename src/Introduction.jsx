@@ -43,6 +43,6 @@ export const Introduction = () => {
             </Flip>
             {/*<p className="text-3xl text-indigo-100 font-mono my-12 mx-auto w-30">"Give me the designs, I'll get the rest done"</p>*/}
         </div>
-        <img src={Tania} className="basis-2/5 self-end"/>
+        <img src={Tania} alt="profile" className="basis-2/5 self-end"/>
     </heading>
 }

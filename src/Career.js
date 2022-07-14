@@ -1,7 +1,6 @@
 import {SectionTitle} from "./SectionTitle";
 import {PlaceOfWork} from "./PlaceOfWork";
 
-import Zoom from "react-reveal/Zoom";
 const WORKPLACES = [
     {
     dates: 'Jun 22 - Jul 22',

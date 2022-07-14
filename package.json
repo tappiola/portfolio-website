@@ -12,9 +12,7 @@
     "react-dom": "^18.1.0",
     "react-reveal": "^1.2.2",
     "react-scripts": "5.0.1",
-    "react-transition-group": "^4.4.2",
-    "tw-elements": "^1.0.0-alpha12",
-    "web-vitals": "^2.1.4"
+    "tw-elements": "^1.0.0-alpha12"
   },
   "scripts": {
     "start": "react-scripts start",
