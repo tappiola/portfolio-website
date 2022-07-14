@@ -91,8 +91,6 @@ export const Projects = () => {
             {/*<SectionTitle>Selected projects</SectionTitle>*/}
                 {PROJECTS.map(project => <ProjectCard key={project.title} project={project} />)}
             {/*</section>*/}
-            <div onClick={test-test }> 8hkola8 rsdr4de
-            </div>
         </>
     )
 }
