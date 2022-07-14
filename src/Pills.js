@@ -4,8 +4,8 @@ export const Pills = ({pills, color}) => {
       py-0.25
       my-1.5
       mr-2
-      ${color === 'teal' ? 'text-lime-500': 'text-teal-500'}
-      ${color === 'teal' ? 'border-lime-500': 'border-teal-500'}
+      ${color === 'teal' ? 'text-lime-300': 'text-teal-500'}
+      ${color === 'teal' ? 'border-lime-300': 'border-teal-500'}
       border-2
       text-xs
       uppercase

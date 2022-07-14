@@ -1,31 +1,32 @@
+import {useScrollDirection} from "./useScrollEffect";
+
 const headerLinks = [
+    {name: 'Skills', anchor: '#skills'},
     {name: 'Projects', anchor: '#projects'},
+    {name: 'Career', anchor: '#career'},
     {name: 'Testimonials', anchor: '#testimonials'},
-    {name: 'Contacts', anchor: '#contacts'},
 ]
 
 export default function Header() {
+    const scrollDirection = useScrollDirection();
+
     return (
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-            <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
+        <header className={`w-screen px-4 sm:px-6 backdrop-blur z-10 shadow-lg py-5 fixed ${ scrollDirection === "down" ? "-top-20" : "top-0"}`}>
+            <div className="flex justify-between items-center md:justify-start md:space-x-10">
                 <div className="flex justify-start lg:w-0 lg:flex-1">
-                    <a href="#">
-                        <span className="sr-only">Workflow</span>
-                        <img
-                            className="h-8 w-auto sm:h-10"
-                            src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                            alt=""
-                        />
+                    <a href="/" className="text-teal-500 text-lg">
+                        TAPPIOLA
                     </a>
                 </div>
-                <div>
+                <nav>
                     {headerLinks.map(l => (
-                        <a key={l.name} href={l.anchor} className="text-base font-medium text-gray-500 hover:text-indigo-600 px-10">
+                        <a key={l.name} href={l.anchor} className="text-base font-medium text-stone-300 hover:text-teal-500 px-10">
                             {l.name}
                         </a>
                     ))}
-                </div>
+                </nav>
             </div>
-        </div>
+            {/*<button className="text-teal-500 border-2 border-teal-500 border w-fit py-3 px-4 rounded mt-12 ">Check out my CV!</button>*/}
+        </header>
     )
 }

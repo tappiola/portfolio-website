@@ -1,6 +1,7 @@
 import {SectionTitle} from "./SectionTitle";
 import {PlaceOfWork} from "./PlaceOfWork";
 
+import Zoom from "react-reveal/Zoom";
 const WORKPLACES = [
     {
     dates: 'Jun 22 - Jul 22',
@@ -40,10 +41,10 @@ const WORKPLACES = [
 ];
 
 export const Career = () => {
-    return <>
+    return <section id="career" className="pt-20 -mt-20">>
         <SectionTitle>My Career</SectionTitle>
     <ol className="border-l border-gray-300 m-10">
         {WORKPLACES.map((work) => <PlaceOfWork key={work.company} work={work}/> )}
     </ol>
-        </>
+        </section>
 }

@@ -1,9 +1,9 @@
 import {AboutMeSection} from "./AboutMeSection";
 import backend from './screenshots/back-end-developer.png';
 import soft from './screenshots/soft.png';
-import react from './screenshots/react6.png';
+import react from './screenshots/Drawing.png';
 import quality from './screenshots/quality2.png';
-import css from './screenshots/css.png';
+import css from './screenshots/photo_2022-07-14_12-06-22.jpg';
 
 const ABOUT_ME = [
     {
@@ -72,7 +72,7 @@ const ABOUT_ME = [
 ];
 
 export const AboutMe = () => {
-    return <div className="text-stone-200 px-10 flex flex-wrap justify-center">
+    return <section id="skills" className="text-stone-200 px-10 flex flex-wrap justify-center">
         {ABOUT_ME.map(({title, features, image}, index) => <AboutMeSection key={title} title={title} features={features} img={image} index={index}/> )}
-    </div>
+    </section>
 }

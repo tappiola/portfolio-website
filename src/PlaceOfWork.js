@@ -1,11 +1,14 @@
+import Zoom from 'react-reveal/Zoom';
+
 export const PlaceOfWork = ({work: {dates, company, title, description, location}}) => {
-    return <li>
+    return <Zoom>
+    <li>
         <div className="flex flex-start items-center pt-3">
             <div className="bg-gray-300 w-2 h-2 rounded-full -ml-1 mr-3"/>
             <p className="text-gray-400 text-sm">{dates}</p>
         </div>
         <div className="mt-0.5 ml-4 mb-6">
-            <h4 className="text-indigo-400 font-semibold text-xl mb-1.5">{title}</h4>
+            <h4 className="text-teal-600 font-semibold text-xl mb-1.5">{title}</h4>
             <p className="text-gray-400 text-md">{company}</p>
             <p className="text-gray-500 text-xs mb-2 flex">
                 <svg className="w-2 mr-1 inline-block inline-flex" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
@@ -15,4 +18,5 @@ export const PlaceOfWork = ({work: {dates, company, title, description, location
             {description.map((p, i) => <p key={i} className="text-stone-400 mb-2 last:mb-0">{p}</p>)}
         </div>
     </li>
+    </Zoom>
 }

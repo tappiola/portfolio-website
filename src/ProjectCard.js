@@ -1,9 +1,9 @@
 import {Pills} from "./Pills";
+import Fade from 'react-reveal/Fade';
 
 export const ProjectCard = ({project, project: {screenshot, title, description, pillsFe, pillsBe, siteUrl, githubUrl}}) => {
-    console.log({project, pillsBe, pillsFe});
 
-    return <div className="p-10 m-10 bg-stone-700 rounded-2xl flex">
+    return <Fade><div className="p-10 m-10 bg-stone-700 rounded-2xl flex">
         <div className="block basis-2/5 shrink-0">
             <img
                 src={screenshot}
@@ -19,7 +19,7 @@ export const ProjectCard = ({project, project: {screenshot, title, description, 
                 <Pills pills={pillsBe} color="teal"/>
             </div>
             <div className='flex'>
-                <a href={siteUrl} target='_blank' rel="noreferrer" className='text-stone-300 hover:text-stone-200 mr-10'>
+                <a href={siteUrl} target='_blank' rel="noreferrer" className='text-stone-300 hover:text-stone-200 hover:underline mr-10'>
                     <svg xmlns="http://www.w3.org/2000/svg"
                          viewBox="0 0 640 512"
                          className="w-5 h-5 mr-2 inline-block"
@@ -28,7 +28,7 @@ export const ProjectCard = ({project, project: {screenshot, title, description, 
                     </svg>
                     <span>Live website</span>
                 </a>
-                {githubUrl && <a href={githubUrl} target='_blank' rel="noreferrer" className='text-stone-300 hover:text-stone-200 inline-flex items-center'>
+                {githubUrl && <a href={githubUrl} target='_blank' rel="noreferrer" className='text-stone-300 hover:text-stone-200 hover:underline inline-flex items-center'>
                     <svg xmlns="http://www.w3.org/2000/svg"
                          viewBox="0 0 496 512"
                          className="w-5 h-5 mr-2 inline-block"
@@ -43,5 +43,6 @@ export const ProjectCard = ({project, project: {screenshot, title, description, 
 
         </div>
     </div>
+    </Fade>
 }
 

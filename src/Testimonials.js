@@ -72,7 +72,7 @@ export const Testimonial = ({active}) => {
 }
 
 export const Testimonials = () => {
-    return <div id='testimonials' className="container my-24 px-6 mx-auto">
+    return <section id='testimonials' className="container my-24 px-6 mx-auto">
 
         <section className="mb-32 text-gray-800 text-center">
 
@@ -237,5 +237,5 @@ export const Testimonials = () => {
             </div>
         </section>
 
-    </div>
+    </section>
 }

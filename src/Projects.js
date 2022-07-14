@@ -86,11 +86,10 @@ const PROJECTS = [
 ];
 
 export const Projects = () => {
-    return (<>
+    return (
+            <section id='projects' className="pt-20 -mt-20">
             <SectionTitle>Selected projects</SectionTitle>
-            <div id='projects'>
                 {PROJECTS.map(project => <ProjectCard key={project.title} project={project} />)}
-            </div>
-        </>
+            </section>
     )
 }
