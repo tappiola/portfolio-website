@@ -72,7 +72,8 @@ const ABOUT_ME = [
 ];
 
 export const AboutMe = () => {
-    return <section id="skills" className="text-stone-200 px-10 flex flex-wrap justify-center">
+    return <>
+        <div id='skills'/>
         {ABOUT_ME.map(({title, features, image}, index) => <AboutMeSection key={title} title={title} features={features} img={image} index={index}/> )}
-    </section>
+    </>
 }

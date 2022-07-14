@@ -9,11 +9,13 @@ function App() {
   return (
       <div className="bg-stone-900">
           <Header/>
-          <Introduction/>
-          <AboutMe/>
-          <Projects/>
-          <Career/>
-          <Testimonials/>
+          <div className="h-screen snap-y snap-mandatory overflow-y-auto">
+              <Introduction/>
+              <AboutMe/>
+              <Projects/>
+              <Career/>
+              <Testimonials/>
+          </div>
       </div>
   );
 }

@@ -3,8 +3,8 @@ import Fade from 'react-reveal/Fade';
 
 export const ProjectCard = ({project, project: {screenshot, title, description, pillsFe, pillsBe, siteUrl, githubUrl}}) => {
 
-    return <Fade><div className="p-10 m-10 bg-stone-700 rounded-2xl flex">
-        <div className="block basis-3/5 shrink-0">
+    return <Fade><div className="p-10 m-10 bg-stone-700 rounded-2xl flex snap-center" style={{height: '80vh'}}>
+        <div className="block basis-2/3 shrink-0">
             <img
                 src={screenshot}
                 className="block object-cover aspect-video opacity-70 grayscale-30 hover:opacity-100 hover:filter-none object-center-top"

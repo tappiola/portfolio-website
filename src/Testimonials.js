@@ -72,7 +72,7 @@ export const Testimonial = ({active}) => {
 }
 
 export const Testimonials = () => {
-    return <section id='testimonials' className="container my-24 px-6 mx-auto">
+    return <section id='testimonials' className="container my-24 px-6 mx-auto h-full snap-center">
 
         <section className="mb-32 text-gray-800 text-center">
 

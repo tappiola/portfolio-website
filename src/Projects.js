@@ -86,10 +86,13 @@ const PROJECTS = [
 ];
 
 export const Projects = () => {
-    return (
-            <section id='projects' className="pt-20 -mt-20">
-            <SectionTitle>Selected projects</SectionTitle>
+    return (<>
+            <div id='projects'/>
+            {/*<SectionTitle>Selected projects</SectionTitle>*/}
                 {PROJECTS.map(project => <ProjectCard key={project.title} project={project} />)}
-            </section>
+            {/*</section>*/}
+            <div onClick={test-test }> 8hkola8 rsdr4de
+            </div>
+        </>
     )
 }

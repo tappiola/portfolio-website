@@ -2,7 +2,7 @@ import { ReactComponent as CheckMark} from './CheckMark.svg';
 import {Fade} from 'react-reveal';
 
 export const AboutMeSection = ({title, features, img, index}) => {
-    return <Fade><div className="p-10 my-5 mx-5 flex items-center">
+    return <Fade><div className="p-10 my-5 mx-5 flex items-center h-screen snap-center text-stone-200 px-10">
         <picture className={`basis-2/5 shrink-0 ${index % 2 !== 0 ? 'order-1': ''}`}>
         <img src={img} className='object-cover aspect-video object-center-top' alt="skill"/>
         </picture>
