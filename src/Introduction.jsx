@@ -12,7 +12,7 @@ const FEATURES = [
 ];
 
 export const Introduction = () => {
-    return <heading className="flex justify-around items-center h-screen bg-stone-800 pt-30 snap-center">
+    return <section className="flex justify-around items-center h-screen bg-stone-800 pt-30 snap-center">
         <div className="flex flex-col justify-around">
             <div className="mt-5">
                 <p className="text-4xl text-stone-300">Hi, I'm Tania</p>
@@ -44,5 +44,5 @@ export const Introduction = () => {
             {/*<p className="text-3xl text-indigo-100 font-mono my-12 mx-auto w-30">"Give me the designs, I'll get the rest done"</p>*/}
         </div>
         <img src={Tania} alt="profile" className="basis-2/5 self-end"/>
-    </heading>
+    </section>
 }

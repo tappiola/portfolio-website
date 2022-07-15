@@ -1,5 +1,6 @@
 import {SectionTitle} from "./SectionTitle";
 import {PlaceOfWork} from "./PlaceOfWork";
+import React from "react";
 
 const WORKPLACES = [
     {
@@ -39,11 +40,11 @@ const WORKPLACES = [
     },
 ];
 
-export const Career = () => {
-    return <section id="career" className="pt-20 -mt-20 h-full overflow-y-auto snap-start">
+export const Career = React.forwardRef((props, ref) => {
+    return <section id="career" ref={ref} className="pt-20 -mt-20 h-full overflow-y-auto snap-start">
         <SectionTitle>My Career</SectionTitle>
     <ol className="border-l border-gray-300 m-10">
         {WORKPLACES.map((work) => <PlaceOfWork key={work.company} work={work}/> )}
     </ol>
         </section>
-}
+});

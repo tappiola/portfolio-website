@@ -8,6 +8,7 @@ import tasks from './screenshots/tasks.png';
 import scandipwa from './screenshots/scandipwa.png';
 import codenames from './screenshots/codenames.png';
 import {SectionTitle} from "./SectionTitle";
+import React from "react";
 
 const PROJECTS = [
     {
@@ -85,12 +86,11 @@ const PROJECTS = [
     },
 ];
 
-export const Projects = () => {
-    return (<>
-            <div id='projects'/>
-            {/*<SectionTitle>Selected projects</SectionTitle>*/}
-                {PROJECTS.map(project => <ProjectCard key={project.title} project={project} />)}
-            {/*</section>*/}
+export const Projects = React.forwardRef((props, ref) => {
+    return (
+        <>
+            <div id='projects' ref={ref}/>
+            {PROJECTS.map(project => <ProjectCard key={project.title} project={project} />)}
         </>
     )
-}
+});

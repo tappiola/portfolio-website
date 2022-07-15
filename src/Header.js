@@ -1,13 +1,20 @@
 import {useScrollDirection} from "./useScrollEffect";
 
+export const MENU = {
+    Skills: 'Skills',
+    Projects: 'Projects',
+    Career: 'Career',
+    Testimonials: 'Testimonials'
+}
+
 const headerLinks = [
-    {name: 'Skills', anchor: '#skills'},
-    {name: 'Projects', anchor: '#projects'},
-    {name: 'Career', anchor: '#career'},
-    {name: 'Testimonials', anchor: '#testimonials'},
+    {name: MENU.Skills, anchor: '#skills'},
+    {name: MENU.Projects, anchor: '#projects'},
+    {name: MENU.Career, anchor: '#career'},
+    {name: MENU.Testimonials, anchor: '#testimonials'},
 ]
 
-export default function Header() {
+export default function Header({activeMenuItem}) {
     const scrollDirection = useScrollDirection();
 
     return (
@@ -19,14 +26,16 @@ export default function Header() {
                     </a>
                 </div>
                 <nav>
-                    {headerLinks.map(l => (
-                        <a key={l.name} href={l.anchor} className="text-base font-medium text-stone-300 hover:text-teal-500 px-10">
-                            {l.name}
+                    {headerLinks.map(({name, anchor}) => (
+                        <a
+                            key={name}
+                            href={anchor}
+                            className={`text-base font-light ${name === activeMenuItem ? 'text-teal-500' : 'text-stone-300'} hover:text-teal-500 px-10`}>
+                            {name}
                         </a>
                     ))}
                 </nav>
             </div>
-            {/*<button className="text-teal-500 border-2 border-teal-500 border w-fit py-3 px-4 rounded mt-12 ">Check out my CV!</button>*/}
         </header>
     )
 }

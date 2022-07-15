@@ -1,4 +1,5 @@
 import {SectionTitle} from "./SectionTitle";
+import React from 'react';
 
 export const Testimonial = ({active}) => {
     return <div className={`carousel-item relative float-left w-full ${active ? 'active': ''}`}>
@@ -71,8 +72,8 @@ export const Testimonial = ({active}) => {
     </div>
 }
 
-export const Testimonials = () => {
-    return <section id='testimonials' className="container my-24 px-6 mx-auto h-full snap-center">
+export const Testimonials = React.forwardRef((props, ref) => {
+    return <section ref={ref} id='testimonials' className="container my-24 px-6 mx-auto h-full snap-center pt-20 -mt-20">
 
         <section className="mb-32 text-gray-800 text-center">
 
@@ -236,6 +237,8 @@ export const Testimonials = () => {
                 </button>
             </div>
         </section>
-
+        <div className="flex">
+        <button className="text-teal-500 border-2 border-teal-500 border w-fit py-3 px-4 rounded mt-12 mx-auto ">Check out my CV!</button>
+        </div>
     </section>
-}
+});

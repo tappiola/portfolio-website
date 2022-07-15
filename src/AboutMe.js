@@ -4,6 +4,7 @@ import soft from './screenshots/soft.png';
 import react from './screenshots/Drawing.png';
 import quality from './screenshots/quality2.png';
 import css from './screenshots/photo_2022-07-14_12-06-22.jpg';
+import React from "react";
 
 const ABOUT_ME = [
     {
@@ -33,9 +34,11 @@ const ABOUT_ME = [
         features: [
             'I use React and Svelte for building user interfaces',
             'Excellent knowledge of React hooks and lifecycle methods',
-            'I care about applications performance',
+            'I use lazy loading and code splitting to optimise applications performance',
             'I use centralised storage in applications when needed',
-            'I connect FEs to both Restful and GraphQL APIs',
+            'I efficiently connect FEs to backend using both Restful and GraphQL APIs',
+            'I generate Lighthouse reports for my projects to make sure they follow the recommended guidelines.',
+            'I bring centralised storage such as Redux or React Context to projects to avoid props drilling',
             'Good knowledge of BOM, DOM events and Vanilla JS',
             'I pay attention to edge cases and add proper error handling'
         ],
@@ -71,9 +74,9 @@ const ABOUT_ME = [
     },
 ];
 
-export const AboutMe = () => {
+export const AboutMe = React.forwardRef((props, ref)=> {
     return <>
-        <div id='skills'/>
+        <div id='skills' ref={ref}/>
         {ABOUT_ME.map(({title, features, image}, index) => <AboutMeSection key={title} title={title} features={features} img={image} index={index}/> )}
     </>
-}
+});
