@@ -1,6 +1,8 @@
 import {SectionTitle} from "./SectionTitle";
 import React from 'react';
 
+const EMAIL = 'karamorina@gmail.com';
+
 export const Testimonial = ({active}) => {
     return <div className={`carousel-item relative float-left w-full ${active ? 'active': ''}`}>
         <div className="flex flex-wrap justify-center">
@@ -237,8 +239,11 @@ export const Testimonials = React.forwardRef((props, ref) => {
                 </button>
             </div>
         </section>
-        <div className="flex">
-        <button className="text-teal-500 border-2 border-teal-500 border w-fit py-3 px-4 rounded mt-12 mx-auto ">Check out my CV!</button>
+        <div className="flex flex-col justify-between items-center w-3/5 mx-auto mt-8">
+        <button className="text-teal-500 border-2 border-teal-500 border w-fit py-3 px-4 rounded mx-auto hover:bg-teal-700 hover:bg-opacity-10">Check out my CV!</button>
+            <p className="text-stone-400 mt-20">Want to offer me a new opportunity, ask a question or just to say hi?</p>
+            <p className="text-stone-400">Don't hesitate to contact me!</p>
+            <p className="text-stone-400">Email: <a href={`mailto:${EMAIL}`} className="normal-case text-base text-light underline">{EMAIL}</a></p>
         </div>
     </section>
 });

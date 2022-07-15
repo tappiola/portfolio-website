@@ -2,8 +2,6 @@ import {AboutMeSection} from "./AboutMeSection";
 import backend from './screenshots/back-end-developer.png';
 import soft from './screenshots/soft.png';
 import react from './screenshots/Drawing.png';
-import quality from './screenshots/quality2.png';
-// import css from './screenshots/css6.png';
 import css from './screenshots/img_1.png';
 import React from "react";
 import css2 from './screenshots/img_2.png';
