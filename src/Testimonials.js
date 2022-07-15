@@ -97,7 +97,7 @@ export const Testimonials = React.forwardRef((props, ref) => {
             </div>
         </section>
         <div className="flex flex-col justify-between items-center w-3/5 mx-auto mt-8">
-        <button className="text-teal-500 border-2 border-teal-500 border w-fit py-3 px-4 rounded mx-auto hover:bg-teal-700 hover:bg-opacity-10">Check out my CV!</button>
+        <a href="/CV.pdf" download="CV - Tatiana Karamorina" className="text-base normal-case text-teal-500 border-2 border-teal-500 border w-fit py-3 px-4 rounded mx-auto hover:bg-teal-700 hover:bg-opacity-10">Check out my CV!</a>
             <p className="text-stone-400 mt-20">Want to offer me a new opportunity, ask a question or just to say hi?</p>
             <p className="text-stone-400">Don't hesitate to contact me!</p>
             <p className="text-stone-400">Email: <a href={`mailto:${EMAIL}`} className="normal-case text-base text-light underline">{EMAIL}</a></p>
