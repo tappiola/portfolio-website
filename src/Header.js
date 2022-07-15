@@ -21,7 +21,7 @@ export default function Header({activeMenuItem}) {
         <header className={`w-screen px-4 sm:px-6 backdrop-blur z-40 shadow-lg py-5 fixed ${ scrollDirection === "down" ? "-top-20" : "top-0"}`}>
             <div className="flex justify-between items-center md:justify-start md:space-x-10">
                 <div className="flex justify-start lg:w-0 lg:flex-1">
-                    <a href="/" className="text-teal-500 text-lg">
+                    <a href="#" className="text-teal-500 text-lg">
                         TAPPIOLA
                     </a>
                 </div>
