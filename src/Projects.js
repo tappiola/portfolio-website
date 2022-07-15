@@ -1,13 +1,12 @@
 import {ProjectCard} from "./ProjectCard";
-import ondat from "./screenshots/ondat.png";
-import shop from "./screenshots/shop.png";
+import ondat from "./screenshots/ondat3.png";
+import shop from "./screenshots/shop2.png";
 import wordle from "./screenshots/wordle.png";
 import realEstate from './screenshots/real_estate.png';
 import stocks from './screenshots/stocks.png';
 import tasks from './screenshots/tasks.png';
 import scandipwa from './screenshots/scandipwa.png';
 import codenames from './screenshots/codenames.png';
-import {SectionTitle} from "./SectionTitle";
 import React from "react";
 
 const PROJECTS = [
