@@ -19,7 +19,7 @@ export default function Header({activeMenuItem}) {
 
     return (
         <header className={`w-screen px-4 sm:px-6 backdrop-blur z-40 shadow-lg py-5 fixed ${ scrollDirection === "down" ? "-top-20" : "top-0"}`}>
-            <div className="flex justify-between items-center md:justify-start md:space-x-10">
+            <div className="flex justify-between items-center md:space-x-10">
                 <div className="flex justify-start lg:w-0 lg:flex-1">
                     <a href="#" className="text-teal-500 text-lg">
                         TAPPIOLA
@@ -30,7 +30,7 @@ export default function Header({activeMenuItem}) {
                         <a
                             key={name}
                             href={anchor}
-                            className={`text-base font-light ${name === activeMenuItem ? 'text-teal-500' : 'text-stone-300'} hover:text-teal-500 px-10`}>
+                            className={`text-base font-light lg:inline-block ${name === activeMenuItem ? 'text-teal-500 inline-block' : 'text-stone-300 hidden'} hover:text-teal-500 lg:px-10`}>
                             {name}
                         </a>
                     ))}

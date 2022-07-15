@@ -14,7 +14,7 @@ const FEATURES = [
 const EMAIL = 'karamorina@gmail.com';
 
 export const Introduction = () => {
-    return <section className="flex justify-around items-center h-screen bg-stone-800 pt-30 snap-center">
+    return <section className="flex flex-wrap xl:flex-nowrap justify-around items-center xl:h-screen bg-stone-800 pt-24 xl:pt-0 px-10 xl:px-0 snap-center">
         <div className="flex flex-col justify-around">
             <div className="mt-5">
                 <p className="text-4xl text-stone-300">Hi, I'm Tania</p>
@@ -43,7 +43,7 @@ export const Introduction = () => {
             </div>
             </div>
             <Flip top cascade>
-            <ul className="text-stone-400 mt-24">
+            <ul className="text-stone-400 mt-10 xl:mt-24">
                 {FEATURES.map((feature, i) => <li key={i} className="flex my-5 items-start"><CheckMark/>{feature}</li>)}
             </ul>
             </Flip>

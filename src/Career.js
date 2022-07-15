@@ -41,7 +41,7 @@ const WORKPLACES = [
 ];
 
 export const Career = React.forwardRef((props, ref) => {
-    return <section id="career" ref={ref} className="pt-20 -mt-20 h-full overflow-y-auto snap-start">
+    return <section id="career" ref={ref} className="pt-20 -mt-20 xl:h-full overflow-y-auto snap-start">
         <SectionTitle>My Career</SectionTitle>
     <ol className="border-l border-gray-300 m-10">
         {WORKPLACES.map((work) => <PlaceOfWork key={work.company} work={work}/> )}

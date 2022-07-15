@@ -50,7 +50,7 @@ const App= () => {
   return (
       <div className="bg-stone-900" >
           <Header activeMenuItem={activeMenuItem}/>
-          <div className="h-screen snap-y snap-mandatory overflow-y-auto" onScroll={processScroll} ref={windowRef}>
+          <div className="h-screen xl:snap-y xl:snap-mandatory overflow-y-auto" onScroll={processScroll} ref={windowRef}>
               <Introduction/>
               <AboutMe ref={skillsRef}/>
               <Projects ref={projectsRef}/>

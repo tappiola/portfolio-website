@@ -3,23 +3,23 @@ import Fade from 'react-reveal/Fade';
 
 export const ProjectCard = ({project, project: {screenshot, title, description, pillsFe, pillsBe, siteUrl, githubUrl}}) => {
 
-    return <Fade><div className="p-10 m-10 bg-stone-700 rounded-2xl flex snap-center" style={{height: '80vh'}}>
-        <div className="block basis-2/3 shrink-0">
+    return <Fade><div className="p-5 xl:p-10 m-5 xl:m-10 bg-stone-700 rounded-2xl flex snap-center xl:height=[80vh] flex-wrap xl:flex-nowrap">
+        <div className="block basis-full xl:basis-2/3 shrink-0">
             <img
                 src={screenshot}
                 className="block object-cover aspect-video opacity-90 grayscale-[30%] hover:opacity-100 hover:filter-none object-center-top"
                 alt="Project"
             />
         </div>
-        <div className="pl-20">
-            <h1 className="text-stone-300 text-4xl mb-3">{title}</h1>
+        <div className="xl:pl-20">
+            <h1 className="text-stone-300 text-4xl mb-3 mt-5 xl:mt-0">{title}</h1>
             {description.map((p, i) => <p key={i} className="text-stone-400 mb-4 last:mb-0">{p}</p>)}
             <div className="my-5">
                 <Pills pills={pillsFe} color="lime"/>
                 <Pills pills={pillsBe} color="teal"/>
             </div>
             <div className='flex'>
-                <a href={siteUrl} target='_blank' rel="noreferrer" className='text-stone-300 hover:text-stone-200 hover:underline mr-10'>
+                <a href={siteUrl} target='_blank' rel="noreferrer" className='shrink-0 text-stone-300 hover:text-stone-200 hover:underline mr-10'>
                     <svg xmlns="http://www.w3.org/2000/svg"
                          viewBox="0 0 640 512"
                          className="w-5 h-5 mr-2 inline-block"

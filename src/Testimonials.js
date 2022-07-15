@@ -69,25 +69,25 @@ export const Testimonial = ({active, testimonial: {company, name, text}}) => {
 }
 
 export const Testimonials = React.forwardRef((props, ref) => {
-    return <section ref={ref} id='testimonials' className="container my-24 px-6 mx-auto h-full snap-center pt-20 -mt-20">
+    return <section ref={ref} id='testimonials' className="container my-24 px-6 mx-auto xl:h-full snap-center pt-20 -mt-20">
 
         <section className="mb-32 text-gray-800 text-center">
 
             <SectionTitle>Testimonials</SectionTitle>
 
-            <div className="carousel slide relative h-56" data-bs-ride="carousel">
+            <div className="carousel slide relative h-68 xl:h-56" data-bs-ride="carousel">
                 <div className="carousel-inner relative w-full overflow-hidden">
                     {TESTIMONIALS.map((t, i) => <Testimonial key={i} testimonial={t} active={i === 0}/>)}
                 </div>
 
                 <button
-                    className="text-stone-300 carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
+                    className="hidden lg:block text-stone-300 carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
                     type="button" data-bs-slide="prev">
                     <span className="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"/>
                     <span className="visually-hidden">Previous</span>
                 </button>
                 <button
-                    className="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
+                    className="hidden lg:block carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
                     type="button"
                     data-bs-slide="next"
                 >
@@ -96,10 +96,10 @@ export const Testimonials = React.forwardRef((props, ref) => {
                 </button>
             </div>
         </section>
-        <div className="flex flex-col justify-between items-center w-3/5 mx-auto mt-8">
+        <div className="flex flex-col justify-between items-center lg:w-3/5 mx-auto mt-8">
         <a href="/CV.pdf" download="CV - Tatiana Karamorina" className="text-base normal-case text-teal-500 border-2 border-teal-500 border w-fit py-3 px-4 rounded mx-auto hover:bg-teal-700 hover:bg-opacity-10">Check out my CV!</a>
-            <p className="text-stone-400 mt-20">Want to offer me a new opportunity, ask a question or just to say hi?</p>
-            <p className="text-stone-400">Don't hesitate to contact me!</p>
+            <p className="text-stone-400 text-center mt-20">Want to offer me a new opportunity, ask a question or just to say hi?</p>
+            <p className="text-stone-400 mt-5">Don't hesitate to contact me!</p>
             <p className="text-stone-400">Email: <a href={`mailto:${EMAIL}`} className="normal-case text-base text-light underline">{EMAIL}</a></p>
         </div>
     </section>
