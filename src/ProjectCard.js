@@ -7,7 +7,7 @@ export const ProjectCard = ({project, project: {screenshot, title, description, 
         <div className="block basis-2/3 shrink-0">
             <img
                 src={screenshot}
-                className="block object-cover aspect-video opacity-70 grayscale-30 hover:opacity-100 hover:filter-none object-center-top"
+                className="block object-cover aspect-video opacity-90 grayscale-[30%] hover:opacity-100 hover:filter-none object-center-top"
                 alt="Project"
             />
         </div>

@@ -6,7 +6,7 @@ import {Career} from "./Career";
 import {AboutMe} from "./AboutMe";
 import {useRef, useState} from "react";
 
-function App() {
+const App= () => {
     const windowRef = useRef();
     const testimonialsRef = useRef();
     const careerRef = useRef();
@@ -15,7 +15,7 @@ function App() {
 
     const [activeMenuItem, setActiveMenuItem] = useState(null);
 
-    const onScroll = (e) => {
+    const onScroll = () => {
         const windowScroll = windowRef.current.scrollTop;
         const testimonialsStart = testimonialsRef.current.offsetTop;
         const careerStart = careerRef.current.offsetTop;
