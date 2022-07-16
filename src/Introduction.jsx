@@ -1,4 +1,4 @@
-import Tania from "./tania.png";
+import Tania from "./tania4.png";
 import {ReactComponent as CheckMark} from "./CheckMark.svg";
 import Flip from 'react-reveal/Flip';
 
@@ -48,6 +48,6 @@ export const Introduction = () => {
             </ul>
             </Flip>
         </div>
-        <img src={Tania} alt="profile" className="basis-2/5 self-end"/>
+        <img src={Tania} alt="profile" className="w-[47%] self-end"/>
     </section>
 }
