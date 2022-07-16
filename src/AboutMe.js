@@ -23,11 +23,11 @@ const ABOUT_ME = [
     {
         title: 'Making it visually perfect',
         features: [
-            'Websites I make match perfectly match Figma designs',
+            'Websites I make perfectly match Figma designs',
             'All websites are supporting responsive layout and developed using mobile-first approach',
-            'I make the necessary adjustments for the applications to work properly in different browsers / on real mobile devices',
-            'I\'m working with a broad range of CSS tooling (pure CSS, CSS modules, SASS, styled-components, Tailwind CSS, Material UI), know which tool to select for a particular case',
-            'Have experience of creating complex animated UI components from scratch (e.g. carousel, swipe to delete, fullscreen image zoom, image gallery, notifications stack, tooltips)',
+            'Necessary adjustments for cross-browser compatibility and proper work on mobile devices',
+            'Confident knowledge of a broad range of CSS tooling (pure CSS, CSS modules, SASS, styled-components, Tailwind CSS, Material UI), know which tool to select for a particular case',
+            'Experience in creating complex animated UI components from scratch (e.g. carousel, swipe to delete, fullscreen image zoom, image gallery, notifications stack, tooltips)',
             'I follow accessibility guidelines',
         ],
         image: [css, css2],
@@ -35,10 +35,10 @@ const ABOUT_ME = [
     {
         title: 'React and other modern JS tooling',
         features: [
-            'I use React and Svelte for building user interfaces',
+            'React and Svelte for building user interfaces',
             'Excellent knowledge of React hooks and lifecycle methods',
-            'Lazy loading and code splitting to optimise applications performance',
-            'I efficiently connect FEs to backend using both Restful and GraphQL APIs',
+            'Lazy loading and code splitting to optimise performance',
+            'Working with both RESTful and GraphQL APIs',
             'Lighthouse reports for  recommended guidelines compliance checks',
             'Centralised storage such as Redux or React Context instead of props drilling',
             'Good knowledge of BOM, DOM events and Vanilla JS',
@@ -51,12 +51,12 @@ const ABOUT_ME = [
         features: [
             'PRs and code reviews as a standard',
             'I use tools such as plop to standardise components naming and structure',
-            'Tools such as Eslint and StyleLint for consistent code formatting',
-            'Prop-types and Typescript to avoid typing errors',
+            'Tools such as ESlint and StyleLint for consistent code formatting',
+            'PropTypes and TypeScript to avoid typing errors',
             'I aim to use latest versions of libraries',
             'I write unit tests and check tests coverage',
             'Mocks and Storybook help me test edge cases',
-            'I use GitHub actions for pull requests checks',
+            'I use GitHub Actions for pull requests checks',
             'I execute basic e2e tests before making a PR',
         ],
         image: [cypress],
@@ -68,9 +68,9 @@ const ABOUT_ME = [
             'QA experience helps me develop features of better quality',
             'Good knowledge of databases and big data project experience',
             'Broad knowledge of automation testing tooling',
-            'I have enough skills to develop a backend with REST / GraphQL APIs and DB layer',
-            'Docker, docker-compose and basic Kubernetes knowledge',
-            'Basic app deployment skills using AWS, Firebase, Netlify'
+            'Enough skills to develop a backend with REST / GraphQL API and DB layer',
+            'Knowledge of Docker, docker-compose and Kubernetes basics',
+            'Basic experience with cloud and CI/CD tooling (AWS, Firebase, TeamCity)'
         ],
         image: [backend, be2],
     },
