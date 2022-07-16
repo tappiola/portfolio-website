@@ -14,7 +14,7 @@ const FEATURES = [
 const EMAIL = 'karamorina@gmail.com';
 
 export const Introduction = () => {
-    return <section className="flex flex-wrap xl:flex-nowrap justify-around items-center xl:h-screen bg-stone-800 pt-24 xl:pt-0 px-10 xl:px-0 snap-center">
+    return <section className="flex flex-wrap md:flex-nowrap justify-around items-center xl:h-screen bg-stone-800 pt-24 xl:pt-0 px-10 xl:px-0 snap-center">
         <div className="flex flex-col justify-around">
             <div className="mt-5">
                 <p className="text-4xl text-stone-300">Hi, I'm Tania</p>
@@ -48,6 +48,6 @@ export const Introduction = () => {
             </ul>
             </Flip>
         </div>
-        <img src={Tania} alt="profile" className="w-[47%] self-end"/>
+        <img src={Tania} alt="profile" className="w-[47%] self-end hidden md:block"/>
     </section>
 }

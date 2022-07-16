@@ -30,7 +30,7 @@ export const AboutMeSection = ({title, features, img, index}) => {
         return <img src={img[0]} className='object-cover object-center-top opacity-70 grayscale-3 rounded' alt="skill"/>;
     }
 
-                return <Fade><div className="px-3 py-2 xl:p-10 my-5 mx-5 flex flex-wrap xl:flex-nowrap items-center xl:h-screen snap-center text-stone-200 px-10">
+                return <Fade><div className="px-3 py-2 xl:p-10 my-5 mx-5 flex flex-wrap xl:flex-nowrap items-center xl:h-screen snap-center text-stone-200 md:px-10">
                 <picture className={`basis-full xl:basis-2/5 shrink-0 ${index % 2 !== 0 ? 'xl:order-1': ''}`}>
                     {renderImages()}
                      </picture>
