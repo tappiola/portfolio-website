@@ -21,7 +21,7 @@ const TESTIMONIALS = [{
 {
   company: 'Ondat',
   name: 'Marco Visintin',
-  text: 'Tatiana has been productive on the project from the first wee and was doing high quality work. She asks sensible questions when getting to understand things and makes sensible decisions.',
+  text: 'In the time I worked with her Tatiana proved herself incredibly smart and a very quick study. She has been able to absorb vast amount of information on our fairly complex stack in a surprisingly short period of time.',
 },
 {
   company: 'Easybrain',
