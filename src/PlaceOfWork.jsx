@@ -8,7 +8,6 @@ export function PlaceOfWork({
   return (
     <Zoom>
       <li>
-
         <div className="flex flex-start items-center pt-3">
           <div className="bg-gray-300 w-2 h-2 rounded-full -ml-1 mr-3" />
           <p className="text-gray-400 text-sm">{dates}</p>

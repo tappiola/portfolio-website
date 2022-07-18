@@ -2,24 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-    font-family: 'Roboto-Mono';
-    src: url('./fonts/RobotoMono.ttf');
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: 'Ubuntu-Regular';
-    src: url('./fonts/Ubuntu-Regular.ttf');
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: 'Kanit';
-    src: url('./fonts/Kanit-Regular.ttf');
-    font-weight: normal;
-}
-
 body {
     font-family: "Source Code Pro", monospace;
     font-weight: 300;

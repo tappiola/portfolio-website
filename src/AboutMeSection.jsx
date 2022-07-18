@@ -1,11 +1,23 @@
 import { Fade } from 'react-reveal';
 import { ReactComponent as CheckMark } from './images/CheckMark.svg';
 
+export const SKILLS = {
+  Personal: 'Personal',
+  UX: 'UX',
+  FE: 'FE',
+  BE: 'BE',
+  QA: 'QA',
+};
+
 export function AboutMeSection({
-  title, features, img, index,
+  id,
+  title,
+  features,
+  img,
+  index,
 }) {
   const renderImages = () => {
-    if (index === 1) {
+    if (id === SKILLS.UX) {
       return (
         <>
           <img src={img[0]} className="grayscale-[30%] rounded relative xl:top-20 z-10 shadow-lg xl:w-3/4" alt="skill" />
@@ -18,7 +30,7 @@ export function AboutMeSection({
       );
     }
 
-    if (index === 2) {
+    if (id === SKILLS.FE) {
       return (
         <>
           <img src={img[0]} className="grayscale-[30%] rounded relative  shadow-lg xl:w-3/4" alt="skill" />
@@ -31,7 +43,7 @@ export function AboutMeSection({
       );
     }
 
-    if (index === 4) {
+    if (id === SKILLS.BE) {
       return (
         <>
           <img src={img[0]} className="grayscale-[30%] rounded relative shadow-lg xl:w-3/4" alt="skill" />

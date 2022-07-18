@@ -1,5 +1,5 @@
 import React from 'react';
-import { AboutMeSection } from './AboutMeSection';
+import { AboutMeSection, SKILLS } from './AboutMeSection';
 import backend from './images/back-end-developer.png';
 import soft from './images/soft.png';
 import react from './images/drawing.png';
@@ -11,6 +11,7 @@ import cypress from './images/cypress.png';
 
 const ABOUT_ME = [
   {
+    id: SKILLS.Personal,
     title: 'How I work',
     features: [
       'Quick learner',
@@ -21,6 +22,7 @@ const ABOUT_ME = [
     image: [soft],
   },
   {
+    id: SKILLS.UX,
     title: 'Making it visually perfect',
     features: [
       'Websites I make perfectly match Figma designs',
@@ -33,6 +35,7 @@ const ABOUT_ME = [
     image: [css, css2],
   },
   {
+    id: SKILLS.FE,
     title: 'React and other modern JS tooling',
     features: [
       'React and Svelte for building user interfaces',
@@ -47,6 +50,7 @@ const ABOUT_ME = [
     image: [react, react2],
   },
   {
+    id: SKILLS.QA,
     title: 'I care about code quality',
     features: [
       'PRs and code reviews as a standard',
@@ -62,6 +66,7 @@ const ABOUT_ME = [
     image: [cypress],
   },
   {
+    id: SKILLS.BE,
     title: 'More than just a frontend developer',
     features: [
       'Strong technical background',
@@ -79,8 +84,17 @@ const ABOUT_ME = [
 export const AboutMe = React.forwardRef((props, ref) => (
   <>
     <div id="skills" ref={ref} />
-    {ABOUT_ME.map(({ title, features, image }, index) => (
-      <AboutMeSection key={title} title={title} features={features} img={image} index={index} />
+    {ABOUT_ME.map(({
+      id, title, features, image,
+    }, index) => (
+      <AboutMeSection
+        key={id}
+        title={title}
+        features={features}
+        img={image}
+        index={index}
+        id={id}
+      />
     ))}
   </>
 ));

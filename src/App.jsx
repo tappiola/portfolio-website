@@ -35,13 +35,13 @@ function App() {
     }
   };
 
-  function debounce(func, timeout = 50) {
+  const debounce = (func, timeout = 50) => {
     let timer;
     return (...args) => {
       clearTimeout(timer);
       timer = setTimeout(() => { func.apply(this, args); }, timeout);
     };
-  }
+  };
 
   const processScroll = debounce(onScroll);
 
