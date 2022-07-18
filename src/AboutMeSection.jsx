@@ -1,5 +1,5 @@
 import { Fade } from 'react-reveal';
-import { ReactComponent as CheckMark } from './CheckMark.svg';
+import { ReactComponent as CheckMark } from './images/CheckMark.svg';
 
 export function AboutMeSection({
   title, features, img, index,

@@ -1,6 +1,6 @@
 import Flip from 'react-reveal/Flip';
-import Tania from './tania4.png';
-import { ReactComponent as CheckMark } from './CheckMark.svg';
+import Tania from './images/tania.png';
+import { ReactComponent as CheckMark } from './images/CheckMark.svg';
 
 const FEATURES = [
   '10+ years in IT',
