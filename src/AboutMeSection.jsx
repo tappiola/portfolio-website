@@ -20,11 +20,12 @@ export function AboutMeSection({
     if (id === SKILLS.UX) {
       return (
         <>
-          <img src={img[0]} className="grayscale-[30%] rounded relative xl:top-20 z-10 shadow-lg xl:w-3/4" alt="skill" />
+          <img src={img[0]} className="grayscale-[30%] rounded relative xl:top-20 z-10 shadow-lg xl:w-3/4" alt="skill" loading="lazy" />
           <img
             src={img[1]}
             className="hidden xl:block grayscale-[30%] rounded relative -top-24 -right-40 shadow-lg w-3/4"
             alt="skill"
+            loading="lazy"
           />
         </>
       );
@@ -33,11 +34,12 @@ export function AboutMeSection({
     if (id === SKILLS.FE) {
       return (
         <>
-          <img src={img[0]} className="grayscale-[30%] rounded relative  shadow-lg xl:w-3/4" alt="skill" />
+          <img src={img[0]} className="grayscale-[30%] rounded relative  shadow-lg xl:w-3/4" alt="skill" loading="lazy" />
           <img
             src={img[1]}
             className=" hidden xl:block grayscale-[30%] rounded relative -top-12 -right-40 shadow-lg w-3/4 z-10"
             alt="skill"
+            loading="lazy"
           />
         </>
       );
@@ -51,12 +53,13 @@ export function AboutMeSection({
             src={img[1]}
             className="hidden xl:block grayscale-[30%] rounded relative -top-14 -right-36 shadow-lg w-3/4 z-10"
             alt="skill"
+            loading="lazy"
           />
         </>
       );
     }
 
-    return <img src={img[0]} className="object-cover object-center-top opacity-70 grayscale-3 rounded" alt="skill" />;
+    return <img src={img[0]} className="object-cover object-center-top opacity-70 grayscale-3 rounded" alt="skill" loading="lazy" />;
   };
 
   return (

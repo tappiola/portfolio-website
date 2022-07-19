@@ -40,7 +40,8 @@ export function Testimonial({ active, testimonial: { company, name, text } }) {
     <div className={`carousel-item relative float-left w-full ${active ? 'active' : ''}`}>
       <div className="flex flex-wrap justify-center">
         <div className="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3">
-          <h5 className="text-lg font-bold mb-3 text-stone-300">{name}</h5>
+          {/* <h2 className="text-lg font-bold mb-3 text-stone-300 font-mono">{name}</h2> */}
+          <h4 className="text-lg font-bold mb-3 text-stone-300">{name}</h4>
           <p className="font-medium mb-4 text-stone-400">{company}</p>
           <p className="text-gray-400 mb-6">
             <svg
@@ -125,6 +126,7 @@ export const Testimonials = React.forwardRef((props, ref) => (
       <p className="text-stone-400 mt-5">Don't hesitate to contact me!</p>
       <p className="text-stone-400">
         Email:
+        {' '}
         <a href={`mailto:${EMAIL}`} className="normal-case text-base text-light underline">{EMAIL}</a>
       </p>
     </div>

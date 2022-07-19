@@ -14,6 +14,7 @@ export function ProjectCard({
             src={screenshot}
             className="block object-cover aspect-video opacity-90 grayscale-[30%] hover:opacity-100 hover:filter-none object-center-top"
             alt="Project"
+            loading="lazy"
           />
         </div>
         <div className="xl:pl-20">
