@@ -1,19 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer base {
+    html {
+        font-family: "Source Code Pro", monospace;
+        font-weight: 300;
+    }
 
-body {
-    font-family: "Source Code Pro", monospace;
-    font-weight: 300;
-}
+    h1, h2 {
+        font-family: "Kanit", sans-serif;
+    }
 
-h1, h2 {
-    font-family: "Kanit", sans-serif;
-}
-
-a {
-    font-weight: 400;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    a {
+        font-weight: 400;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
 }

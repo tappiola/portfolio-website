@@ -13,6 +13,7 @@ export function PlaceOfWork({
           <p className="text-gray-400 text-sm">{dates}</p>
         </div>
         <div className="mt-0.5 ml-4 mb-6">
+          {/* <h2 className="text-teal-600 font-semibold text-xl mb-1.5 font-mono">{title}</h2> */}
           <h4 className="text-teal-600 font-semibold text-xl mb-1.5">{title}</h4>
           <p className="text-gray-400 text-md">{company}</p>
           <p className="text-gray-500 text-xs mb-2 flex">
