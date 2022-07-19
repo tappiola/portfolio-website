@@ -47,7 +47,7 @@ function App() {
 
   return (
     <div className="bg-stone-900">
-      <Header activeMenuItem={activeMenuItem} />
+      <Header activeMenuItem={activeMenuItem} windowRef={windowRef} />
       <div className="h-screen xl:snap-y xl:snap-mandatory overflow-y-auto" onScroll={processScroll} ref={windowRef}>
         <Introduction />
         <AboutMe ref={skillsRef} />
