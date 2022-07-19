@@ -1,25 +1,15 @@
 import React from 'react';
 import { ProjectCard } from './ProjectCard';
-import ondat from './images/projects/ondat.png';
-import shop from './images/projects/shop.png';
-import wordle from './images/projects/wordle.png';
-import realEstate from './images/projects/real_estate.png';
-import stocks from './images/projects/stocks.png';
-import tasks from './images/projects/tasks.png';
-import scandipwa from './images/projects/scandipwa.png';
-import codenames from './images/projects/codenames.png';
+import ondat from './images/projects/ondat.webp';
+import shop from './images/projects/shop.webp';
+import wordle from './images/projects/wordle.webp';
+import realEstate from './images/projects/real_estate.webp';
+import stocks from './images/projects/stocks.webp';
+import tasks from './images/projects/tasks.webp';
+import scandipwa from './images/projects/scandipwa.webp';
+import codenames from './images/projects/codenames.webp';
 
 const PROJECTS = [
-  {
-    title: 'Real estate agency website',
-    description: ['Web app allowing to search for real estate properties, filter them and view on interactive map.',
-      'Selected features: user authentication, animations, responsive design, dynamic list loading, react lazy loading, custom carousel, notification stack, images gallery, skeleton loaders.'],
-    pillsFe: ['React', 'React Router v6', 'redux-toolkit', 'SASS', 'react-transition-library', 'TypeScript'],
-    pillsBe: ['Express', 'GraphQL', 'sequelize', 'JWT', 'Docker', 'docker-compose'],
-    screenshot: realEstate,
-    siteUrl: 'https://real-estate.tappiola.com',
-    githubUrl: 'https://github.com/tappiola/real-estate-agency-app',
-  },
   {
     title: 'Portal for Kubernetes clusters monitoring',
     description: ['Portal for monitoring and configuring Kubernetes clusters.'],
@@ -37,6 +27,16 @@ const PROJECTS = [
     screenshot: scandipwa,
     siteUrl: 'https://tech-demo.scandipwa.com/ ',
     githubUrl: 'https://github.com/scandipwa/scandipwa',
+  },
+  {
+    title: 'Real estate agency website',
+    description: ['Web app allowing to search for real estate properties, filter them and view on interactive map.',
+      'Selected features: user authentication, animations, responsive design, dynamic list loading, react lazy loading, custom carousel, notification stack, images gallery, skeleton loaders.'],
+    pillsFe: ['React', 'React Router v6', 'redux-toolkit', 'SASS', 'react-transition-library', 'TypeScript'],
+    pillsBe: ['Express', 'GraphQL', 'sequelize', 'JWT', 'Docker', 'docker-compose'],
+    screenshot: realEstate,
+    siteUrl: 'https://real-estate.tappiola.com',
+    githubUrl: 'https://github.com/tappiola/real-estate-agency-app',
   },
   {
     title: 'Tasks management app',

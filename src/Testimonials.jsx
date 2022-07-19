@@ -126,6 +126,7 @@ export const Testimonials = React.forwardRef((props, ref) => (
       <p className="text-stone-400 mt-5">Don't hesitate to contact me!</p>
       <p className="text-stone-400">
         Email:
+        {' '}
         <a href={`mailto:${EMAIL}`} className="normal-case text-base text-light underline">{EMAIL}</a>
       </p>
     </div>

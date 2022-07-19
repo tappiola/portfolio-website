@@ -3,11 +3,11 @@ import Tania from './images/tania.webp';
 import { ReactComponent as CheckMark } from './images/CheckMark.svg';
 
 const FEATURES = [
-  '10+ years in IT',
-  'Develop using React and Svelte',
+  'Skilled with React and TypeScript',
   'Broad knowledge of modern CSS tooling',
   'Attentiveness to quality (former QA)',
   'Basic backend development skills',
+  '10+ years in IT',
 ];
 
 const EMAIL = 'karamorina@gmail.com';

@@ -1,13 +1,13 @@
 import React from 'react';
 import { AboutMeSection, SKILLS } from './AboutMeSection';
-import backend from './images/back-end-developer.png';
-import soft from './images/soft.png';
-import react from './images/drawing.png';
-import css from './images/css_1.png';
-import css2 from './images/css_2.png';
-import react2 from './images/lighhouse.png';
-import docker from './images/docker.png';
-import cypress from './images/cypress.png';
+import backend from './images/back-end-developer.webp';
+import soft from './images/soft.webp';
+import react from './images/drawing.webp';
+import css from './images/css_1.webp';
+import css2 from './images/css_2.webp';
+import react2 from './images/lighthouse.webp';
+import docker from './images/docker.webp';
+import cypress from './images/cypress.webp';
 
 const ABOUT_ME = [
   {
