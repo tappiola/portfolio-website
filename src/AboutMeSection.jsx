@@ -69,7 +69,7 @@ export function AboutMeSection({
           {renderImages()}
         </picture>
         <div className="xl:mx-20">
-          <h2 className="text-teal-600 my-5 text-2xl font-sans">{title}</h2>
+          <h2 className="text-teal-600 my-5 text-2xl">{title}</h2>
           <ul className="text-stone-400">
             {features.map((feature, i) => (
               <li key={i} className="flex my-5 items-start">
