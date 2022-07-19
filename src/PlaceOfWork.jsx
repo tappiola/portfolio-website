@@ -13,7 +13,7 @@ export function PlaceOfWork({
           <p className="text-gray-400 text-sm">{dates}</p>
         </div>
         <div className="mt-0.5 ml-4 mb-6">
-          <h4 className="text-teal-600 font-semibold text-xl mb-1.5">{title}</h4>
+          <h2 className="text-teal-600 font-semibold text-xl mb-1.5 font-mono">{title}</h2>
           <p className="text-gray-400 text-md">{company}</p>
           <p className="text-gray-500 text-xs mb-2 flex">
             <svg className="w-2 mr-1 inline-block inline-flex" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
