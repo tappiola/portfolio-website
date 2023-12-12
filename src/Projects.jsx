@@ -8,15 +8,62 @@ import stocks from './images/projects/stocks.webp';
 import tasks from './images/projects/tasks.webp';
 import scandipwa from './images/projects/scandipwa.webp';
 import codenames from './images/projects/codenames.webp';
+import util from './images/projects/util.webp';
+import nytta from './images/projects/nytta.png';
 
 const PROJECTS = [
+  {
+    title: 'Solution for Measuring ESG Impact',
+    description: ['AI driven application focused on evaluating the ESG impact of  companies through the lens of the UN SDGs'],
+    pillsFe: [
+      'React',
+      'Typescript',
+      'React Router',
+      'react-hook-form',
+      'redux',
+      'Apollo Client',
+      'Storybook',
+      'Chromatic',
+      'Github Actions',
+      'Auth0',
+      'd3',
+      'plotly',
+      'Cypress',
+      'react-pdf',
+      'Webpack',
+      'react-table',
+      'react-tooltip',
+      'react-select',
+      'react-spring',
+      'react-hot-toast',
+      'react-papaparse',
+      'eslint',
+      'launchdarkly',
+      'plop',
+      'prettier',
+      'GA',
+      'zod',
+      'SASS',
+      'Renovate'],
+    screenshot: util,
+    siteUrl: 'https://www.util.co/',
+    githubUrl: '',
+  },
+  {
+    title: 'Data-centric C2B Solution',
+    description: ['Portal allowing to submit information on the amenities missing in the local area.', 'Demand data helps businesses open the right business in right location, while local people benefit from getting the amenities they need.'],
+    pillsFe: ['React', 'TypeScript', 'NextJS', 'Tailwind CSS', 'primereact', 'mapbox-gl', 'lodash'],
+    pillsBe: ['Prisma', 'PostgreSQL'],
+    screenshot: nytta,
+    // siteUrl: 'https://real-estate.tappiola.com',
+    githubUrl: 'https://github.com/tappiola/nytta',
+  },
   {
     title: 'Portal for Kubernetes clusters monitoring',
     description: ['Portal for monitoring and configuring Kubernetes clusters.'],
     pillsFe: ['React', 'React hooks', 'React Router v6', 'react-query', 'react-hook-form', 'styled-components', 'carbon-components', 'Typescript', 'GraphQL', 'Jest', 'React Testing Library', 'Frontegg', 'plop', 'Storybook', 'Growthbook', 'Github Actions', 'dependabot'],
     pillsBe: ['Nest.js', 'Prisma', 'Kubernetes', 'Docker', 'Pub / Sub', 'Redis', 'PostgreSQL', 'JWT'],
     screenshot: ondat,
-    siteUrl: 'https://portal.ondat.io/',
     githubUrl: '',
   },
   {
@@ -35,7 +82,7 @@ const PROJECTS = [
     pillsFe: ['React', 'React Router v6', 'redux-toolkit', 'SASS', 'react-transition-library', 'TypeScript'],
     pillsBe: ['Express', 'GraphQL', 'sequelize', 'JWT', 'Docker', 'docker-compose'],
     screenshot: realEstate,
-    siteUrl: 'https://real-estate.tappiola.com',
+    // siteUrl: 'https://real-estate.tappiola.com',
     githubUrl: 'https://github.com/tappiola/real-estate-agency-app',
   },
   {
@@ -44,7 +91,7 @@ const PROJECTS = [
     pillsFe: ['React', 'React Router v5', 'React Hooks', 'Redux', 'Jest', 'Enzyme', 'prop-types'],
     pillsBe: ['Firestore', 'Firebase Auth'],
     screenshot: tasks,
-    siteUrl: 'https://todos.tappiola.com',
+    // siteUrl: 'https://todos.tappiola.com',
     githubUrl: 'https://github.com/tappiola/todos_react',
   },
   {
@@ -53,7 +100,7 @@ const PROJECTS = [
     pillsFe: ['React', 'React Router', 'React Hooks', 'React Context', 'clsx'],
     pillsBe: ['Firestore', 'Firebase'],
     screenshot: codenames,
-    siteUrl: 'https://codenames.tappiola.com',
+    // siteUrl: 'https://codenames.tappiola.com',
     githubUrl: 'https://github.com/tappiola/codenames',
   },
   {
@@ -62,7 +109,7 @@ const PROJECTS = [
     pillsFe: ['React', 'React Router', 'Redux', 'axios'],
     pillsBe: ['Django Rest Framework', 'PostgreSQL'],
     screenshot: shop,
-    siteUrl: 'https://tappiola-shop-web.herokuapp.com',
+    // siteUrl: 'https://tappiola-shop-web.herokuapp.com',
     githubUrl: 'https://github.com/tappiola/tappiola_shop',
   },
   {
@@ -71,7 +118,7 @@ const PROJECTS = [
     pillsFe: ['Svelte', 'Svelte Subscriptions', 'Svelte Stores', 'Svelte Transition'],
     pillsBe: [],
     screenshot: wordle,
-    siteUrl: 'https://wordle.tappiola.com/ ',
+    // siteUrl: 'https://wordle.tappiola.com/ ',
     githubUrl: 'https://github.com/tappiola/guess-the-word',
   },
   {
@@ -80,7 +127,7 @@ const PROJECTS = [
     pillsFe: ['Svelte', 'axios', 'chart.js'],
     pillsBe: [],
     screenshot: stocks,
-    siteUrl: 'https://stocks.tappiola.com/',
+    // siteUrl: 'https://stocks.tappiola.com/',
     githubUrl: 'https://github.com/tappiola/live-stocks',
   },
 ];

@@ -4,6 +4,13 @@ import { PlaceOfWork } from './PlaceOfWork';
 
 const WORKPLACES = [
   {
+    dates: 'Aug 22 - Dec 23',
+    company: 'Util',
+    location: 'London, UK',
+    title: 'Frontend Developer (React + Typescript)',
+    description: ['Development of the portal focused on evaluating the ESG impact of companies through the lens of the UN SDGs.', 'Building the application from the ground up. Setting up MFE architecture, CI processes, testing strategy. Complex datasets visualisation.'],
+  },
+  {
     dates: 'Jun 22 - Jul 22',
     company: 'Ondat',
     location: 'London, UK',

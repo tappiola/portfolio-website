@@ -1,10 +1,9 @@
 export function Pills({ pills, color }) {
   return (
-    <>
-      {pills.map((p) => (
-        <p
-          key={p}
-          className={`rounded-md
+    pills?.map((p) => (
+      <p
+        key={p}
+        className={`rounded-md
       px-2
       py-0.25
       my-1.5
@@ -19,11 +18,10 @@ export function Pills({ pills, color }) {
       tracking-wider
       inline-block
       `}
-        >
+      >
 
-          {p}
-        </p>
-      ))}
-    </>
+        {p}
+      </p>
+    ))
   );
 }

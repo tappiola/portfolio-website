@@ -1,4 +1,3 @@
-import { Fade } from 'react-reveal';
 import { ReactComponent as CheckMark } from './images/CheckMark.svg';
 
 export const SKILLS = {
@@ -63,23 +62,21 @@ export function AboutMeSection({
   };
 
   return (
-    <Fade>
-      <div className="px-3 py-2 xl:p-10 my-5 mx-5 flex flex-wrap xl:flex-nowrap items-center xl:h-screen snap-center text-stone-200 md:px-10">
-        <picture className={`basis-full xl:basis-2/5 shrink-0 ${index % 2 !== 0 ? 'xl:order-1' : ''}`}>
-          {renderImages()}
-        </picture>
-        <div className="xl:mx-20">
-          <h2 className="text-teal-600 my-5 text-2xl">{title}</h2>
-          <ul className="text-stone-400">
-            {features.map((feature, i) => (
-              <li key={i} className="flex my-5 items-start">
-                <CheckMark />
-                {feature}
-              </li>
-            ))}
-          </ul>
-        </div>
+    <div className="px-3 py-2 xl:p-10 my-5 mx-5 flex flex-wrap xl:flex-nowrap items-center xl:h-screen snap-center text-stone-200 md:px-10">
+      <picture className={`basis-full xl:basis-2/5 shrink-0 ${index % 2 !== 0 ? 'xl:order-1' : ''}`}>
+        {renderImages()}
+      </picture>
+      <div className="xl:mx-20">
+        <h2 className="text-teal-600 my-5 text-2xl">{title}</h2>
+        <ul className="text-stone-400">
+          {features.map((feature, i) => (
+            <li key={i} className="flex my-5 items-start">
+              <CheckMark />
+              {feature}
+            </li>
+          ))}
+        </ul>
       </div>
-    </Fade>
+    </div>
   );
 }
