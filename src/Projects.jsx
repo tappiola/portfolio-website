@@ -51,8 +51,8 @@ const PROJECTS = [
   },
   {
     title: 'Data-centric C2B Solution',
-    description: ['Portal allowing to submit information on the amenities missing in the local area.', 'Demand data helps businesses open the right business in right location, while local people benefit from getting the amenities they need.'],
-    pillsFe: ['React', 'TypeScript', 'NextJS', 'Tailwind CSS', 'primereact', 'mapbox-gl', 'lodash'],
+    description: ['Portal allowing to submit information on the amenities missing in the local area.', 'Demand data helps entrepreneurs open the right business in right location, while local people benefit from getting the amenities they need.'],
+    pillsFe: ['React', 'TypeScript', 'NextJS', 'Tailwind CSS', 'primereact', 'Mapbox GL', 'lodash'],
     pillsBe: ['Prisma', 'PostgreSQL'],
     screenshot: nytta,
     // siteUrl: 'https://real-estate.tappiola.com',
