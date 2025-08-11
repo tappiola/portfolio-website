@@ -1,11 +1,12 @@
 /* eslint-disable */
+import tailwindcss from '@tailwindcss/vite';
+
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
-  content: ['./index.html', './src/**/*.{js,jsx,ts,tsx,html}', './node_modules/tw-elements/dist/js/**/*.js'],
-  plugins: [
-    require('tw-elements/dist/plugin'),
-  ],
+  content: ['./index.html', './src/**/*.{js,jsx,ts,tsx,html}'],
+  plugins: [tailwindcss()],
+  darkMode: 'class',
   theme: {
     extend: {
       fontFamily: {

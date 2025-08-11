@@ -1,5 +1,5 @@
 import Tania from './images/tania.webp';
-import CheckMark from './images/CheckMark.svg?react';
+import { CheckMark } from './CheckMark';
 
 const FEATURES = [
   'Skilled with React and TypeScript',

@@ -2,20 +2,20 @@
 
 One-page portfolio website with static content.
 
-Deployed to 
+Deployed to https://tappiola.co.uk/
 
 ##Tech stack:
-- React v18
+- React v19
 - Tailwind CSS
 
 
-###Run project locally:
+### Run project locally:
 ```
-npm start
+pnpm dev
 ```
 
-###Deploy to fireabse:
+### Deploy to firebase:
 ```
-npm run build
+pnpm run build
 firebase deploy
 ```

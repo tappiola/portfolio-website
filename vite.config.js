@@ -1,7 +1,7 @@
-const { defineConfig } = require('vite');
-const react = require('@vitejs/plugin-react');
-const svgr = require('vite-plugin-svgr').default;
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import tailwindcss from '@tailwindcss/vite';
 
-module.exports = defineConfig({
-  plugins: [react(), svgr()],
+export default defineConfig({
+  plugins: [react(), tailwindcss()],
 });
