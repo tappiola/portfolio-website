@@ -1,4 +1,4 @@
-export function Pills({ pills, color }) {
+export function Pills({ pills, color }: { pills?: string[]; color: string }) {
   return pills?.map((p) => (
     <p
       key={p}

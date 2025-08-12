@@ -6,7 +6,15 @@ export const SKILLS = {
   FE: 'FE',
   BE: 'BE',
   QA: 'QA',
-};
+} as const;
+
+interface AboutMeSectionProps {
+  id: string;
+  title: string;
+  features: string[];
+  img: string[];
+  index: number;
+}
 
 export function AboutMeSection({
   id,
@@ -14,7 +22,7 @@ export function AboutMeSection({
   features,
   img,
   index,
-}) {
+}: AboutMeSectionProps) {
   const renderImages = () => {
     if (id === SKILLS.UX) {
       return (

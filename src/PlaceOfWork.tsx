@@ -1,8 +1,14 @@
+interface Work {
+  dates: string;
+  company: string;
+  title: string;
+  description: string[];
+  location: string;
+}
+
 export function PlaceOfWork({
-  work: {
-    dates, company, title, description, location,
-  },
-}) {
+  work: { dates, company, title, description, location },
+}: { work: Work }) {
   return (
     <li>
       <div className="flex flex-start items-center pt-3">

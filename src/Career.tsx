@@ -1,8 +1,16 @@
-import React from 'react';
 import { SectionTitle } from './SectionTitle';
 import { PlaceOfWork } from './PlaceOfWork';
+import type { RefObject } from 'react';
 
-const WORKPLACES = [
+interface WorkPlace {
+  dates: string;
+  company: string;
+  location: string;
+  title: string;
+  description: string[];
+}
+
+const WORKPLACES: WorkPlace[] = [
   {
     dates: 'Apr 24 - May 25',
     company: 'Santander Consumer Finance',
@@ -75,7 +83,7 @@ const WORKPLACES = [
   },
 ];
 
-export const Career = ({ ref }) => (
+export const Career = ({ ref }: { ref: RefObject<HTMLDivElement | null> }) => (
   <section
     id="career"
     ref={ref}

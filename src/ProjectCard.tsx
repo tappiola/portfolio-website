@@ -1,5 +1,15 @@
 import { Pills } from './Pills';
 
+interface Project {
+  screenshot: string;
+  title: string;
+  description: string[];
+  pillsFe?: string[];
+  pillsBe?: string[];
+  siteUrl?: string;
+  githubUrl?: string;
+}
+
 export function ProjectCard({
   project: {
     screenshot,
@@ -10,7 +20,7 @@ export function ProjectCard({
     siteUrl,
     githubUrl,
   },
-}) {
+}: { project: Project }) {
   return (
     <div className="p-5 xl:p-10 m-5 xl:m-10 bg-stone-700 rounded-2xl flex snap-center xl:height=[80vh] flex-wrap xl:flex-nowrap">
       <div className="block basis-full xl:basis-2/3 shrink-0">

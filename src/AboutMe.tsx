@@ -1,4 +1,3 @@
-import React from 'react';
 import { AboutMeSection, SKILLS } from './AboutMeSection';
 import backend from './images/back-end-developer.webp';
 import soft from './images/soft.webp';
@@ -8,8 +7,16 @@ import css2 from './images/css_2.webp';
 import react2 from './images/lighthouse.webp';
 import docker from './images/docker.webp';
 import cypress from './images/cypress.webp';
+import type { RefObject } from 'react';
 
-const ABOUT_ME = [
+interface AboutMeItem {
+  id: string;
+  title: string;
+  features: string[];
+  image: string[];
+}
+
+const ABOUT_ME: AboutMeItem[] = [
   {
     id: SKILLS.Personal,
     title: 'How I work',
@@ -82,7 +89,7 @@ const ABOUT_ME = [
   },
 ];
 
-export const AboutMe = ({ ref }) => (
+export const AboutMe = ({ ref }: { ref: RefObject<HTMLDivElement | null> }) => (
   <>
     <div id="skills" ref={ref} />
     {ABOUT_ME.map(({ id, title, features, image }, index) => (

@@ -1,6 +1,12 @@
-import { useEffect, useState } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 
-export function Carousel({ children, className }) {
+export function Carousel({
+  children,
+  className,
+}: {
+  children: ReactNode | ReactNode[];
+  className?: string;
+}) {
   const slides = Array.isArray(children) ? children : [children];
   const length = slides.length;
   const [index, setIndex] = useState(1);

@@ -1,4 +1,4 @@
-import { useCallback } from 'react';
+import { type RefObject, useCallback } from 'react';
 import { useScrollDirection } from './useScrollEffect';
 
 export const MENU = {
@@ -6,7 +6,7 @@ export const MENU = {
   Projects: 'Projects',
   Career: 'Career',
   Testimonials: 'Testimonials',
-};
+} as const;
 
 const headerLinks = [
   { name: MENU.Skills, anchor: '#skills' },
@@ -15,18 +15,33 @@ const headerLinks = [
   { name: MENU.Testimonials, anchor: '#testimonials' },
 ];
 
-export default function Header({ activeMenuItem, windowRef }) {
+interface HeaderProps {
+  activeMenuItem: string | null;
+  windowRef: RefObject<HTMLDivElement | null>;
+}
+
+export default function Header({ activeMenuItem, windowRef }: HeaderProps) {
   const scrollDirection = useScrollDirection();
 
   const scrollTop = useCallback(() => {
-    windowRef.current.scrollTo({ top: 0, behavior: 'smooth' });
-  }, []);
+    if (windowRef.current) {
+      windowRef.current.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }, [windowRef]);
 
   return (
-    <header className={`w-screen px-4 sm:px-6 backdrop-blur z-40 shadow-lg py-5 fixed ${scrollDirection === 'down' ? '-top-20' : 'top-0'}`}>
+    <header
+      className={`w-screen px-4 sm:px-6 backdrop-blur z-40 shadow-lg py-5 fixed ${scrollDirection === 'down' ? '-top-20' : 'top-0'}`}
+    >
       <div className="flex justify-between items-center md:space-x-10">
         <div className="flex justify-start lg:w-0 lg:flex-1">
-          <div role="button" className="text-teal-500 text-lg" onClick={scrollTop} onKeyDown={scrollTop} tabIndex={0}>
+          <div
+            role="button"
+            className="text-teal-500 text-lg"
+            onClick={scrollTop}
+            onKeyDown={scrollTop}
+            tabIndex={0}
+          >
             TAPPIOLA
           </div>
         </div>

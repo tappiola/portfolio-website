@@ -1,10 +1,16 @@
-import React from 'react';
 import { SectionTitle } from './SectionTitle';
 import { Carousel } from './Carousel';
+import type { RefObject } from 'react';
 
 const EMAIL = 't.karamorina@gmail.com';
 
-const TESTIMONIALS = [
+interface TestimonialData {
+  company: string;
+  name: string;
+  text: string;
+}
+
+const TESTIMONIALS: TestimonialData[] = [
   {
     company: 'Santander',
     name: 'Joe Campion',
@@ -42,7 +48,11 @@ const TESTIMONIALS = [
   },
 ];
 
-export function Testimonial({ testimonial: { company, name, text } }) {
+export function Testimonial({
+  testimonial: { company, name, text },
+}: {
+  testimonial: TestimonialData;
+}) {
   return (
     <div className="flex flex-wrap justify-center">
       <div className="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3">
@@ -94,7 +104,11 @@ export function Testimonial({ testimonial: { company, name, text } }) {
   );
 }
 
-export const Testimonials = ({ ref }) => (
+export const Testimonials = ({
+  ref,
+}: {
+  ref: RefObject<HTMLDivElement | null>;
+}) => (
   <section
     ref={ref}
     id="testimonials"
@@ -113,7 +127,7 @@ export const Testimonials = ({ ref }) => (
       <a
         href="/CV.pdf"
         download="CV - Tatiana Karamorina"
-        className="text-base normal-case text-teal-500 border-2 border-teal-500 border w-fit py-3 px-4 rounded mx-auto hover:bg-teal-700 hover:bg-opacity-10"
+        className="text-base normal-case text-teal-500 border-2 border-teal-500 w-fit py-3 px-4 rounded mx-auto hover:bg-teal-700 hover:bg-opacity-10"
       >
         Check out my CV!
       </a>

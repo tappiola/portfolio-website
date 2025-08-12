@@ -1,4 +1,3 @@
-import React from 'react';
 import { ProjectCard } from './ProjectCard';
 import ondat from './images/projects/ondat.webp';
 import shop from './images/projects/shop.webp';
@@ -10,8 +9,19 @@ import scandipwa from './images/projects/scandipwa.webp';
 import codenames from './images/projects/codenames.webp';
 import util from './images/projects/util.webp';
 import nytta from './images/projects/nytta.png';
+import type { RefObject } from 'react';
 
-const PROJECTS = [
+interface Project {
+  title: string;
+  description: string[];
+  pillsFe?: string[];
+  pillsBe?: string[];
+  screenshot: string;
+  siteUrl?: string;
+  githubUrl?: string;
+}
+
+const PROJECTS: Project[] = [
   {
     title: 'Solution for Measuring ESG Impact',
     description: [
@@ -232,7 +242,11 @@ const PROJECTS = [
   },
 ];
 
-export const Projects = ({ ref }) => (
+export const Projects = ({
+  ref,
+}: {
+  ref: RefObject<HTMLDivElement | null>;
+}) => (
   <>
     <div id="projects" ref={ref} />
     {PROJECTS.map((project) => (
