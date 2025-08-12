@@ -6,7 +6,7 @@ const FEATURES = [
   'Broad knowledge of modern CSS tooling',
   'Attentiveness to quality (former QA)',
   'Basic backend development skills',
-  '11+ years in IT',
+  '13+ years in IT',
 ];
 
 const EMAIL = 'karamorina@gmail.com';

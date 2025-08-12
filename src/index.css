@@ -1,9 +1,13 @@
 @import "tailwindcss";
 
+@theme {
+    --font-sans: 'Kanit', sans-serif;
+    --font-mono: 'Source Code Pro', monospace;
+}
+
 @layer base {
     html {
-        @apply font-mono;
-        font-weight: 300;
+        @apply font-mono font-light;
     }
 
     h1, h2 {
@@ -11,9 +15,7 @@
     }
 
     a {
-        font-weight: 400;
-        font-size: 12px;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
+        @apply font-normal text-xs uppercase tracking-wider;
     }
 }
+
