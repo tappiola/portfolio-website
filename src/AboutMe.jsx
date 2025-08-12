@@ -18,7 +18,8 @@ const ABOUT_ME = [
       'Always diving deep into project details and architecture',
       'Able to work in rapidly changing startup environments efficiently',
       'Comfortable working in small teams, not afraid to take responsibility and perform a broad scope of tasks',
-      'Constantly suggest the ways to improve the project (from code quality to UX and processes)'],
+      'Constantly suggest the ways to improve the project (from code quality to UX and processes)',
+    ],
     image: [soft],
   },
   {
@@ -81,12 +82,10 @@ const ABOUT_ME = [
   },
 ];
 
-export const AboutMe = React.forwardRef((props, ref) => (
+export const AboutMe = ({ ref }) => (
   <>
     <div id="skills" ref={ref} />
-    {ABOUT_ME.map(({
-      id, title, features, image,
-    }, index) => (
+    {ABOUT_ME.map(({ id, title, features, image }, index) => (
       <AboutMeSection
         key={id}
         title={title}
@@ -97,4 +96,4 @@ export const AboutMe = React.forwardRef((props, ref) => (
       />
     ))}
   </>
-));
+);

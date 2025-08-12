@@ -17,7 +17,7 @@ export function Introduction() {
       <div className="flex flex-col justify-around">
         <div className="mt-5">
           <p className="text-4xl text-stone-300">Hi, I'm Tatiana</p>
-          <p className="text-4xl text-teal-600">Frontend Developer</p>
+          <p className="text-4xl text-teal-600">Frontend Engineer</p>
           <div className="my-5">
             <a
               href="https://www.linkedin.com/in/tatiana-karamorina/"
