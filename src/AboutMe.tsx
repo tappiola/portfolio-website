@@ -6,7 +6,6 @@ import css from './images/css_1.webp';
 import css2 from './images/css_2.webp';
 import react2 from './images/lighthouse.webp';
 import docker from './images/docker.webp';
-import cypress from './images/cypress.webp';
 import type { RefObject } from 'react';
 
 interface AboutMeItem {
@@ -19,71 +18,49 @@ interface AboutMeItem {
 const ABOUT_ME: AboutMeItem[] = [
   {
     id: SKILLS.Personal,
-    title: 'How I work',
+    title: 'Me as a team member',
     features: [
-      'Quick learner',
-      'Always diving deep into project details and architecture',
-      'Able to work in rapidly changing startup environments efficiently',
-      'Comfortable working in small teams, not afraid to take responsibility and perform a broad scope of tasks',
-      'Constantly suggest the ways to improve the project (from code quality to UX and processes)',
+      'Quick to learn and adapt to new tools, domains, and challenges',
+      'Dive deep into project details and architecture to make well-informed technical decisions',
+      'Proven track record of spinning up new projects and delivering independently',
+      'Thrive in rapidly changing startup environments and work comfortably in small, collaborative teams',
+      'Efficiently handle cross-functional tasks, taking ownership and responsibility when needed',
+      'Proactive in suggesting improvements to code quality, user experience, and development processes',
     ],
     image: [soft],
   },
   {
     id: SKILLS.UX,
-    title: 'Making it visually perfect',
+    title: 'Quality and visual perfection as a standard',
     features: [
-      'Websites I make perfectly match Figma designs',
-      'All websites are supporting responsive layout and developed using mobile-first approach',
-      'Necessary adjustments for cross-browser compatibility and proper work on mobile devices',
-      'Confident knowledge of a broad range of CSS tooling (pure CSS, CSS modules, SASS, styled-components, Tailwind CSS, Material UI), know which tool to select for a particular case',
-      'Experience in creating complex animated UI components from scratch (e.g. carousel, swipe to delete, fullscreen image zoom, image gallery, notifications stack, tooltips)',
-      'I follow accessibility guidelines',
+      'Experience in following accessibility quidelines and making applications compliant to EAA (European Accessibility Act)',
+      'Mastery of modern testing frameworks and tools (vitest, Storybook, Cypress), with high quality as the standard',
+      'Strong attention to design and user experience, capability of producing high-quality designs and UX independently when needed',
+      'Skilled in orchestration and observability, setting up monitoring with tools like Datadog and effectively investigating and resolving errors to maintain system reliability',
+      'Thorough validation of responsive behaviour anf cross-browser compatibility',
     ],
     image: [css, css2],
   },
   {
     id: SKILLS.FE,
-    title: 'React and other modern JS tooling',
+    title: 'Confident knowledge of modern JS tooling',
     features: [
-      'React and Svelte for building user interfaces',
-      'Excellent knowledge of React hooks and lifecycle methods',
-      'Lazy loading and code splitting to optimise performance',
-      'Working with both RESTful and GraphQL APIs',
-      'Lighthouse reports for  recommended guidelines compliance checks',
-      'Centralised storage such as Redux or React Context instead of props drilling',
-      'Good knowledge of BOM, DOM events and Vanilla JS',
-      'I pay attention to edge cases and add loaders and proper error handling',
+      'Proficiency with React and Svelte',
+      'Confident command of Static-side generation (SSG), Server side rendering (SSR) and server components (Next JS, TanStack Start)',
+      'Experience with complex data visualisations (D3, Plotly.js, Mapbox GL, Google Charts, Highcharts) and document generation (React PDF)',
+      'Mastery of effective routing (Tanstack Router, React Router) and data fetching technics (Apollo Client, TanStack Query)',
     ],
     image: [react, react2],
   },
   {
-    id: SKILLS.QA,
-    title: 'I care about code quality',
-    features: [
-      'PRs and code reviews as a standard',
-      'I use tools such as plop to standardise components naming and structure',
-      'Tools such as ESlint and StyleLint for consistent code formatting',
-      'PropTypes and TypeScript to avoid typing errors',
-      'I aim to use latest versions of libraries',
-      'I write unit tests and check tests coverage',
-      'Mocks and Storybook help me test edge cases',
-      'I use GitHub Actions for pull requests checks',
-      'I execute basic e2e tests before making a PR',
-    ],
-    image: [cypress],
-  },
-  {
     id: SKILLS.BE,
-    title: 'More than just a frontend developer',
+    title: 'Full-Stack and Cross-Disciplinary Expertise',
     features: [
-      'Strong technical background',
-      'QA experience helps me develop features of better quality',
-      'Good knowledge of databases and big data project experience',
-      'Broad knowledge of automation testing tooling',
-      'Enough skills to develop a backend with REST / GraphQL API and DB layer',
-      'Knowledge of Docker, docker-compose and Kubernetes basics',
-      'Basic experience with cloud and CI/CD tooling (AWS, Firebase, TeamCity)',
+      '8+ years of commercial experience as a QA engineer, broad knowledge of automation and performance testing tooling',
+      'Expertise in building backends with REST / GraphQL APIs (NestJS, FastAPI) and usage of ORMs (Prisma, SQLAlchemy)',
+      'Extensive practical experience with modern cloud and CI/CD tooling (AWS, GitHub Actions, Docker, Terraform)',
+      'Experienced with machine learning and large language models (LLMs), building chatbots and implementing retrieval-augmented generation (RAG) using LangChain',
+      'Skilled in working with big data and writing complex SQL',
     ],
     image: [backend, docker],
   },

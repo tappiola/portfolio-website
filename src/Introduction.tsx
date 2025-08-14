@@ -5,7 +5,7 @@ const FEATURES = [
   'Skilled with React and TypeScript',
   'Broad knowledge of modern CSS tooling',
   'Attentiveness to quality (former QA)',
-  'Basic backend development skills',
+  'Full-stack expertise',
   '13+ years in IT',
 ];
 
