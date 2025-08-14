@@ -1,4 +1,4 @@
-import { ProjectCard } from './ProjectCard';
+import { type Project, ProjectCard } from './ProjectCard';
 import ondat from './images/projects/ondat.webp';
 import shop from './images/projects/shop.webp';
 import wordle from './images/projects/wordle.webp';
@@ -9,19 +9,37 @@ import scandipwa from './images/projects/scandipwa.webp';
 import codenames from './images/projects/codenames.webp';
 import util from './images/projects/util.webp';
 import nytta from './images/projects/nytta.png';
+import santander from './images/projects/santander.png';
+import calendar from './images/projects/calendar.png';
+import chooser from './images/projects/chooser.png';
 import type { RefObject } from 'react';
 
-interface Project {
-  title: string;
-  description: string[];
-  pillsFe?: string[];
-  pillsBe?: string[];
-  screenshot: string;
-  siteUrl?: string;
-  githubUrl?: string;
-}
-
 const PROJECTS: Project[] = [
+  {
+    title: 'Santander Vehicle Leasing Platform',
+    description: [
+      'Multi-tenant platform supporting the end-to-end lifecycle of vehicle leasing - from vehicle selection to contract management.',
+    ],
+    pillsFe: [
+      'react',
+      'typescript',
+      'react-router',
+      'react-hook-form',
+      'tanstack query',
+      'tanstack table',
+      'tailwind',
+      'Headless UI',
+      'i18next',
+      'turborepo',
+      'zod',
+      'vite',
+      'vitest',
+      'storybook',
+      'launchdarkly',
+    ],
+    pillsBe: ['datadog', 'AWS', 'Github Actions', 'GraphQL'],
+    screenshot: santander,
+  },
   {
     title: 'Solution for Measuring ESG Impact',
     description: [
@@ -59,8 +77,6 @@ const PROJECTS: Project[] = [
       'Renovate',
     ],
     screenshot: util,
-    siteUrl: 'https://www.util.co/',
-    githubUrl: '',
   },
   {
     title: 'Data-centric C2B Solution',
@@ -79,7 +95,7 @@ const PROJECTS: Project[] = [
     ],
     pillsBe: ['Prisma', 'PostgreSQL'],
     screenshot: nytta,
-    // siteUrl: 'https://real-estate.tappiola.com',
+    siteUrl: 'https://nytta.tappiola.co.uk',
     githubUrl: 'https://github.com/tappiola/nytta',
   },
   {
@@ -89,7 +105,7 @@ const PROJECTS: Project[] = [
       'React',
       'React hooks',
       'React Router v6',
-      'react-query',
+      'Tanstack query',
       'react-hook-form',
       'styled-components',
       'carbon-components',
@@ -115,7 +131,6 @@ const PROJECTS: Project[] = [
       'JWT',
     ],
     screenshot: ondat,
-    githubUrl: '',
   },
   {
     title: 'E-commerce website',
@@ -138,7 +153,7 @@ const PROJECTS: Project[] = [
     ],
     pillsBe: ['Magento'],
     screenshot: scandipwa,
-    siteUrl: 'https://tech-demo.scandipwa.com/ ',
+    siteUrl: 'https://tech-demo.scandipwa.com/',
     githubUrl: 'https://github.com/scandipwa/scandipwa',
   },
   {
@@ -162,10 +177,62 @@ const PROJECTS: Project[] = [
       'JWT',
       'Docker',
       'docker-compose',
+      'Github Actions',
+      'Terraform',
     ],
     screenshot: realEstate,
-    // siteUrl: 'https://real-estate.tappiola.com',
+    siteUrl: 'https://real-estate.tappiola.co.uk',
     githubUrl: 'https://github.com/tappiola/real-estate-agency-app',
+  },
+  {
+    title: 'Event planner',
+    description: [
+      'Simple web app allowing to view bank holidays and add custom events to calendar.',
+      'Same logic implemented using Next JS and TanStack Start for comparability.',
+    ],
+    pillsFe: [
+      'React',
+      'TypeScript',
+      'Next JS',
+      'App Router',
+      'TanStack Start',
+      'TanStack Router',
+      'vite',
+      'tailwind',
+      'zod',
+    ],
+    pillsBe: ['Prisma'],
+    screenshot: calendar,
+    siteUrl: [
+      'https://calendar.tappiola.co.uk',
+      'https://planner.tappiola.co.uk',
+    ],
+    githubUrl: [
+      'https://github.com/tappiola/tanstack-start-calendar',
+      'https://github.com/tappiola/next-js-calendar',
+    ],
+  },
+  {
+    title: 'Chooser app',
+    description: [
+      'A multi-theme chooser app for selecting first player in games.',
+      'Built with turborepo. Supports PWA and offline mode.',
+    ],
+    pillsFe: [
+      'React',
+      'Typescript',
+      'turborepo',
+      'vite',
+      'vitest',
+      'Github Actions',
+      'PWA',
+    ],
+    screenshot: chooser,
+    siteUrl: [
+      'https://chooser.tappiola.co.uk',
+      'https://pokemon-chooser.co.uk',
+    ],
+    githubUrl: 'https://github.com/tappiola/chooser',
   },
   {
     title: 'Tasks management app',
@@ -184,7 +251,7 @@ const PROJECTS: Project[] = [
     ],
     pillsBe: ['Firestore', 'Firebase Auth'],
     screenshot: tasks,
-    // siteUrl: 'https://todos.tappiola.com',
+    siteUrl: 'https://todos.tappiola.co.uk',
     githubUrl: 'https://github.com/tappiola/todos_react',
   },
   {
@@ -196,7 +263,7 @@ const PROJECTS: Project[] = [
     pillsFe: ['React', 'React Router', 'React Hooks', 'React Context', 'clsx'],
     pillsBe: ['Firestore', 'Firebase'],
     screenshot: codenames,
-    // siteUrl: 'https://codenames.tappiola.com',
+    siteUrl: 'https://codenames.tappiola.co.uk',
     githubUrl: 'https://github.com/tappiola/codenames',
   },
   {
@@ -225,7 +292,7 @@ const PROJECTS: Project[] = [
     ],
     pillsBe: [],
     screenshot: wordle,
-    // siteUrl: 'https://wordle.tappiola.com/ ',
+    siteUrl: 'https://wordle.tappiola.co.uk/',
     githubUrl: 'https://github.com/tappiola/guess-the-word',
   },
   {
@@ -237,7 +304,7 @@ const PROJECTS: Project[] = [
     pillsFe: ['Svelte', 'axios', 'chart.js'],
     pillsBe: [],
     screenshot: stocks,
-    // siteUrl: 'https://stocks.tappiola.com/',
+    siteUrl: 'https://stocks.tappiola.co.uk/',
     githubUrl: 'https://github.com/tappiola/live-stocks',
   },
 ];

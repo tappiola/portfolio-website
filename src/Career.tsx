@@ -17,8 +17,8 @@ const WORKPLACES: WorkPlace[] = [
     location: 'London, UK',
     title: 'Frontend Engineer (React + Typescript)',
     description: [
-      'Development of the portal focused on evaluating the ESG impact of companies through the lens of the UN SDGs.',
-      'Building the application from the ground up. Setting up MFE architecture, CI processes, testing strategy. Complex datasets visualisation.',
+      'Development of the multi-tenant platform supporting the end-to-end lifecycle of vehicle leasing - from vehicle selection to contract management.',
+      'Building new features as well as active involvement in development of internal tooling and design system.',
     ],
   },
   {

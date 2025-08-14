@@ -1,13 +1,12 @@
-import { ReactNode, useEffect, useState } from 'react';
+import { type ReactNode, useEffect, useState } from 'react';
 
 export function Carousel({
-  children,
+  children: slides,
   className,
 }: {
-  children: ReactNode | ReactNode[];
+  children: ReactNode[];
   className?: string;
 }) {
-  const slides = Array.isArray(children) ? children : [children];
   const length = slides.length;
   const [index, setIndex] = useState(1);
   const [paused, setPaused] = useState(false);
@@ -66,7 +65,7 @@ export function Carousel({
       </div>
       <button
         type="button"
-        className="absolute top-1/2 left-1/12 -translate-y-1/2 p-2 text-stone-300 hover:text-stone-50 cursor-pointer"
+        className="absolute top-1/2 left-0 -translate-y-1/2 p-2 text-stone-300 hover:text-stone-50 cursor-pointer"
         onClick={prev}
       >
         <svg
@@ -86,7 +85,7 @@ export function Carousel({
       </button>
       <button
         type="button"
-        className="absolute top-1/2 right-1/12 -translate-y-1/2 p-2 text-stone-300 hover:text-stone-50 cursor-pointer"
+        className="absolute top-1/2 right-0 -translate-y-1/2 p-2 text-stone-300 hover:text-stone-50 cursor-pointer"
         onClick={next}
       >
         <svg

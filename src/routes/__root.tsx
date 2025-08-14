@@ -1,0 +1,70 @@
+/// <reference types="vite/client" />
+import type { ReactNode } from 'react';
+import {
+  Outlet,
+  createRootRoute,
+  HeadContent,
+  Scripts,
+} from '@tanstack/react-router';
+import appCss from '../index.css?url';
+
+export const Route = createRootRoute({
+  head: () => ({
+    title: '',
+    meta: [
+      { charSet: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      {
+        name: 'description',
+        content:
+          'Portfolio website of Tatiana Karamorina, frontend engineer based in London, UK',
+      },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:title', content: 'Frontend engineer portfolio' },
+      {
+        property: 'og:description',
+        content:
+          'Get acquainted with Tatiana, frontend engineer working with React.js and other modern tooling. Check out her projects!',
+      },
+      { property: 'og:image', content: '/preview.jpg' },
+    ],
+    links: [
+      { rel: 'stylesheet', href: appCss },
+      { rel: 'icon', href: '/favicon.ico' },
+      { rel: 'apple-touch-icon', href: '/logo192.png' },
+      { rel: 'manifest', href: '/manifest.json' },
+      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: '' },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500;600;700&family=Kanit:wght@400;500;600&display=swap',
+      },
+    ],
+    htmlAttrs: {
+      lang: 'en',
+    },
+  }),
+  component: RootComponent,
+});
+
+function RootComponent() {
+  return (
+    <RootDocument>
+      <Outlet />
+    </RootDocument>
+  );
+}
+
+function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
+  return (
+    <html>
+      <head>
+        <HeadContent />
+      </head>
+      <body>
+        {children}
+        <Scripts />
+      </body>
+    </html>
+  );
+}

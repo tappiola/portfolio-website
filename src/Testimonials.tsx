@@ -55,7 +55,7 @@ export function Testimonial({
 }) {
   return (
     <div className="flex flex-wrap justify-center">
-      <div className="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3">
+      <div className="grow-0 shrink-0 basis-auto w-5/6 px-3">
         <h2 className="text-lg font-bold mb-3 text-stone-300 font-mono">
           {name}
         </h2>

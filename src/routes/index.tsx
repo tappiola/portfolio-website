@@ -1,12 +1,17 @@
+import { createFileRoute } from '@tanstack/react-router';
 import { useRef, useState } from 'react';
-import Header, { MENU } from './Header';
-import { Introduction } from './Introduction';
-import { Testimonials } from './Testimonials';
-import { Projects } from './Projects';
-import { Career } from './Career';
-import { AboutMe } from './AboutMe';
+import Header, { MENU } from '../Header.tsx';
+import { Introduction } from '../Introduction.tsx';
+import { AboutMe } from '../AboutMe.tsx';
+import { Projects } from '../Projects.tsx';
+import { Career } from '../Career.tsx';
+import { Testimonials } from '../Testimonials.tsx';
 
-function App() {
+export const Route = createFileRoute('/')({
+  component: RouteComponent,
+});
+
+function RouteComponent() {
   const windowRef = useRef<HTMLDivElement>(null);
   const testimonialsRef = useRef<HTMLDivElement>(null);
   const careerRef = useRef<HTMLDivElement>(null);
@@ -22,14 +27,6 @@ function App() {
     const skillsStart = skillsRef.current?.offsetTop ?? 0;
     const projectsStart = projectsRef.current?.offsetTop ?? 0;
 
-    console.log({
-      windowScroll,
-      skillsStart,
-      projectsStart,
-      careerStart,
-      testimonialsStart,
-    });
-
     if (testimonialsStart <= windowScroll) {
       setActiveMenuItem(MENU.Testimonials);
     } else if (careerStart <= windowScroll) {
@@ -43,7 +40,6 @@ function App() {
     }
   };
 
-  // eslint-disable-next-line no-unused-vars
   const debounce = <T extends (...args: unknown[]) => void>(
     func: T,
     timeout = 50,
@@ -76,5 +72,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
