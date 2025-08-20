@@ -125,7 +125,7 @@ export const Testimonials = ({
     </section>
     <div className="flex flex-col justify-between items-center lg:w-3/5 mx-auto mt-8">
       <a
-        href="/CV.pdf"
+        href="https://tappiola-cv.s3.eu-west-2.amazonaws.com/CV-Tatiana-Karamorina.pdf"
         download="CV - Tatiana Karamorina"
         className="text-base normal-case text-teal-500 border-2 border-teal-500 w-fit py-3 px-4 rounded mx-auto hover:bg-teal-700 hover:bg-opacity-10"
       >
