@@ -17,8 +17,8 @@ export function ProjectCard({
     description,
     pillsFe,
     pillsBe,
-    siteUrl,
-    githubUrl,
+    siteUrl = [],
+    githubUrl = [],
   },
 }: {
   project: Project;

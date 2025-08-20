@@ -25,3 +25,7 @@ yarn-error.log*
 
 .idea
 .firebase
+.tanstack
+.output
+.nitro
+firebase-debug.log
