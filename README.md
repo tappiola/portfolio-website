@@ -4,7 +4,7 @@ One-page portfolio website with static content.
 
 Deployed to https://tappiola.co.uk/
 
-##Tech stack:
+## Tech stack:
 - React v19
 - Tailwind CSS
 
