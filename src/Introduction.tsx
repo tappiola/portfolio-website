@@ -9,7 +9,7 @@ const FEATURES = [
   '13+ years in IT',
 ];
 
-const EMAIL = 'karamorina@gmail.com';
+const EMAIL = 't.karamorina@gmail.com';
 
 export function Introduction() {
   return (
