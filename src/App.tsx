@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Header, { MENU } from './Header';
 import { Introduction } from './Introduction';
 import { Testimonials } from './Testimonials';
@@ -15,56 +15,80 @@ function App() {
 
   const [activeMenuItem, setActiveMenuItem] = useState<string | null>(null);
 
-  const onScroll = () => {
-    const windowScroll = windowRef.current?.scrollTop ?? 0;
-    const testimonialsStart = testimonialsRef.current?.offsetTop ?? 0;
-    const careerStart = careerRef.current?.offsetTop ?? 0;
-    const skillsStart = skillsRef.current?.offsetTop ?? 0;
-    const projectsStart = projectsRef.current?.offsetTop ?? 0;
+  useEffect(() => {
+    const root = windowRef.current;
+    if (!root) return;
 
-    console.log({
-      windowScroll,
-      skillsStart,
-      projectsStart,
-      careerStart,
-      testimonialsStart,
+    const targets: Array<{ el: Element | null; menu: string }> = [
+      { el: skillsRef.current, menu: MENU.Skills },
+      { el: projectsRef.current, menu: MENU.Projects },
+      { el: careerRef.current, menu: MENU.Career },
+      { el: testimonialsRef.current, menu: MENU.Testimonials },
+    ];
+
+    const menuByEl = new Map<Element, string>();
+    targets.forEach(({ el, menu }) => {
+      if (el) menuByEl.set(el, menu);
     });
 
-    if (testimonialsStart <= windowScroll) {
-      setActiveMenuItem(MENU.Testimonials);
-    } else if (careerStart <= windowScroll) {
-      setActiveMenuItem(MENU.Career);
-    } else if (projectsStart <= windowScroll) {
-      setActiveMenuItem(MENU.Projects);
-    } else if (skillsStart <= windowScroll) {
-      setActiveMenuItem(MENU.Skills);
-    } else if (activeMenuItem) {
-      setActiveMenuItem(null);
-    }
-  };
+    const visibleSince = new Map<Element, number>();
+    const visible = new Set<Element>();
 
-  // eslint-disable-next-line no-unused-vars
-  const debounce = <T extends (...args: unknown[]) => void>(
-    func: T,
-    timeout = 50,
-  ) => {
-    let timer: number | undefined;
-    return (...args: Parameters<T>) => {
-      clearTimeout(timer);
-      timer = window.setTimeout(() => {
-        func(...args);
-      }, timeout);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            visible.add(entry.target);
+            visibleSince.set(entry.target, performance.now());
+          } else {
+            visible.delete(entry.target);
+            visibleSince.delete(entry.target);
+          }
+        });
+
+        if (visible.size === 0) {
+          setActiveMenuItem(null);
+          return;
+        }
+
+        let chosen: Element | null = null;
+        let ts = -Infinity;
+        visible.forEach((el) => {
+          const t = visibleSince.get(el) ?? 0;
+          if (t > ts) {
+            ts = t;
+            chosen = el;
+          }
+        });
+
+        if (chosen) {
+          const menu = menuByEl.get(chosen);
+          if (menu) setActiveMenuItem(menu);
+        }
+      },
+      {
+        root,
+        // A narrow center band; a section is active when its
+        // anchor/section crosses the middle of the viewport.
+        rootMargin: '-45% 0px -55% 0px',
+        threshold: 0,
+      },
+    );
+
+    targets.forEach(({ el }) => {
+      if (el) observer.observe(el);
+    });
+
+    return () => {
+      observer.disconnect();
     };
-  };
-
-  const processScroll = debounce(onScroll);
+  }, [windowRef, skillsRef, projectsRef, careerRef, testimonialsRef]);
 
   return (
     <div className="bg-stone-900">
       <Header activeMenuItem={activeMenuItem} windowRef={windowRef} />
       <div
         className="h-screen xl:snap-y xl:snap-mandatory overflow-y-auto"
-        onScroll={processScroll}
         ref={windowRef}
       >
         <Introduction />

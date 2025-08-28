@@ -1,5 +1,4 @@
 import { type RefObject, useCallback } from 'react';
-import { useScrollDirection } from './useScrollEffect';
 
 export const MENU = {
   Skills: 'Skills',
@@ -21,8 +20,6 @@ interface HeaderProps {
 }
 
 export default function Header({ activeMenuItem, windowRef }: HeaderProps) {
-  const scrollDirection = useScrollDirection();
-
   const scrollTop = useCallback(() => {
     if (windowRef.current) {
       windowRef.current.scrollTo({ top: 0, behavior: 'smooth' });
@@ -31,7 +28,7 @@ export default function Header({ activeMenuItem, windowRef }: HeaderProps) {
 
   return (
     <header
-      className={`w-screen px-4 sm:px-6 backdrop-blur z-40 shadow-lg py-5 fixed ${scrollDirection === 'down' ? '-top-20' : 'top-0'}`}
+      className={`w-screen px-4 sm:px-6 backdrop-blur z-40 shadow-lg py-5 fixed `}
     >
       <div className="flex justify-between items-center md:space-x-10">
         <div className="flex justify-start lg:w-0 lg:flex-1">

@@ -67,8 +67,7 @@ const ABOUT_ME: AboutMeItem[] = [
 ];
 
 export const AboutMe = ({ ref }: { ref: RefObject<HTMLDivElement | null> }) => (
-  <>
-    <div id="skills" ref={ref} />
+  <section id="skills" ref={ref} className="pt-20 -mt-20">
     {ABOUT_ME.map(({ id, title, features, image }, index) => (
       <AboutMeSection
         key={id}
@@ -79,5 +78,5 @@ export const AboutMe = ({ ref }: { ref: RefObject<HTMLDivElement | null> }) => (
         id={id}
       />
     ))}
-  </>
+  </section>
 );

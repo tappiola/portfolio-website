@@ -314,10 +314,9 @@ export const Projects = ({
 }: {
   ref: RefObject<HTMLDivElement | null>;
 }) => (
-  <>
-    <div id="projects" ref={ref} />
+  <section id="projects" ref={ref} className="pt-20 -mt-20">
     {PROJECTS.map((project) => (
       <ProjectCard key={project.title} project={project} />
     ))}
-  </>
+  </section>
 );
