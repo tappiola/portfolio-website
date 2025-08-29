@@ -10,10 +10,10 @@ import appCss from '../index.css?url';
 
 export const Route = createRootRoute({
   head: () => ({
-    title: '',
     meta: [
       { charSet: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { title: 'Frontend engineer portfolio' },
       {
         name: 'description',
         content:
@@ -26,7 +26,7 @@ export const Route = createRootRoute({
         content:
           'Get acquainted with Tatiana, frontend engineer working with React.js and other modern tooling. Check out her projects!',
       },
-      { property: 'og:image', content: '/preview.jpg' },
+      { property: 'og:image', content: '/og_image.png' },
     ],
     links: [
       { rel: 'stylesheet', href: appCss },
