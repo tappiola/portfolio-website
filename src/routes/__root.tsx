@@ -25,9 +25,8 @@ export const Route = createRootRoute({
         content: 'Tatiana Karamorina — frontend engineer',
       },
       { property: 'og:image', content: '/og_image.png' },
-      { property: 'twitter:card', content: '/og_image.png' },
       { property: 'og:image', content: '/og_image.png' },
-      { property: 'twitter:card', content: '/og_image.png' },
+      { property: 'twitter:card', content: 'summary_large_image' },
       { property: 'twitter:image', content: '/og_image.png' },
     ],
     links: [
