@@ -20,13 +20,15 @@ export const Route = createRootRoute({
           'Portfolio website of Tatiana Karamorina, frontend engineer based in London, UK',
       },
       { property: 'og:type', content: 'website' },
-      { property: 'og:title', content: 'Frontend engineer portfolio' },
       {
-        property: 'og:description',
-        content:
-          'Get acquainted with Tatiana, frontend engineer working with React.js and other modern tooling. Check out her projects!',
+        property: 'og:title',
+        content: 'Tatiana Karamorina — frontend engineer',
       },
       { property: 'og:image', content: '/og_image.png' },
+      { property: 'twitter:card', content: '/og_image.png' },
+      { property: 'og:image', content: '/og_image.png' },
+      { property: 'twitter:card', content: '/og_image.png' },
+      { property: 'twitter:image', content: '/og_image.png' },
     ],
     links: [
       { rel: 'stylesheet', href: appCss },
