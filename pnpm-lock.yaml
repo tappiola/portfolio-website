@@ -8,6 +8,12 @@ importers:
 
   .:
     dependencies:
+      '@datadog/browser-rum':
+        specifier: ^6.18.1
+        version: 6.18.1
+      '@datadog/browser-rum-react':
+        specifier: ^6.18.1
+        version: 6.18.1(@datadog/browser-rum@6.18.1)(react@19.1.1)
       '@tanstack/react-router':
         specifier: ^1.131.10
         version: 1.131.10(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
@@ -232,6 +238,40 @@ packages:
 
   '@dabh/diagnostics@2.0.3':
     resolution: {integrity: sha512-hrlQOIi7hAfzsMqlGSFyVucrx38O+j6wiGOf//H2ecvIEqYN4ADBSS2iLMh5UFyDunCNniUIPk/q3riFv45xRA==}
+
+  '@datadog/browser-core@6.18.1':
+    resolution: {integrity: sha512-1JzFXU6E1cs4n0+avg9JLtlXVwN4J1r8x6CwXcNdC/JXRB2AB3Q5sG03CGni7yHm0yG8KjGVOpKvSl5pCypVfg==}
+
+  '@datadog/browser-rum-core@6.18.1':
+    resolution: {integrity: sha512-pJgH+kZB+taDTuRZmlLbjYmetzu0lWWcYk50JfoeVj6ChdMtPe9SdW6SUoS61+vPMsV8xYUP/YUZE2L48hWpaw==}
+
+  '@datadog/browser-rum-react@6.18.1':
+    resolution: {integrity: sha512-02uI1agqwVlPXy88IjoshR6xalgIwa6KsD82An2UzQNyJ9d/sXhB5Wqvj/NRESgp3bOoi1HjKEPISKvdYAIRxA==}
+    peerDependencies:
+      '@datadog/browser-rum': '*'
+      '@datadog/browser-rum-slim': '*'
+      react: 18 || 19
+      react-router: '7'
+      react-router-dom: 6 || 7
+    peerDependenciesMeta:
+      '@datadog/browser-rum':
+        optional: true
+      '@datadog/browser-rum-slim':
+        optional: true
+      react:
+        optional: true
+      react-router:
+        optional: true
+      react-router-dom:
+        optional: true
+
+  '@datadog/browser-rum@6.18.1':
+    resolution: {integrity: sha512-1DUYO11AL4QjDZAOq+QDH0TeMbwB2/G0MiYxvn1Ljpogsnr7Yz0fr23EBsa52pL6JmiiYIm67l9XK82ED8mu7A==}
+    peerDependencies:
+      '@datadog/browser-logs': 6.18.1
+    peerDependenciesMeta:
+      '@datadog/browser-logs':
+        optional: true
 
   '@dependents/detective-less@5.0.1':
     resolution: {integrity: sha512-Y6+WUMsTFWE5jb20IFP4YGa5IrGY/+a/FbOSjDF/wz9gepU2hwCYSXRHP/vPwBvwcY3SVMASt4yXxbXNXigmZQ==}
@@ -3901,6 +3941,25 @@ snapshots:
       colorspace: 1.1.4
       enabled: 2.0.0
       kuler: 2.0.0
+
+  '@datadog/browser-core@6.18.1': {}
+
+  '@datadog/browser-rum-core@6.18.1':
+    dependencies:
+      '@datadog/browser-core': 6.18.1
+
+  '@datadog/browser-rum-react@6.18.1(@datadog/browser-rum@6.18.1)(react@19.1.1)':
+    dependencies:
+      '@datadog/browser-core': 6.18.1
+      '@datadog/browser-rum-core': 6.18.1
+    optionalDependencies:
+      '@datadog/browser-rum': 6.18.1
+      react: 19.1.1
+
+  '@datadog/browser-rum@6.18.1':
+    dependencies:
+      '@datadog/browser-core': 6.18.1
+      '@datadog/browser-rum-core': 6.18.1
 
   '@dependents/detective-less@5.0.1':
     dependencies:

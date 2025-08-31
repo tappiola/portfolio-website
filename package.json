@@ -12,6 +12,8 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "@datadog/browser-rum": "^6.18.1",
+    "@datadog/browser-rum-react": "^6.18.1",
     "@tanstack/react-router": "^1.131.10",
     "@tanstack/react-start": "^1.131.11",
     "react": "^19.1.0",
