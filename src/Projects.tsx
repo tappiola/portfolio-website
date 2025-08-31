@@ -8,10 +8,10 @@ import tasks from './images/projects/tasks.webp';
 import scandipwa from './images/projects/scandipwa.webp';
 import codenames from './images/projects/codenames.webp';
 import util from './images/projects/util.webp';
-import nytta from './images/projects/nytta.png';
-import santander from './images/projects/santander.png';
-import calendar from './images/projects/calendar.png';
-import chooser from './images/projects/chooser.png';
+import nytta from './images/projects/nytta.webp';
+import santander from './images/projects/santander.webp';
+import calendar from './images/projects/calendar.webp';
+import chooser from './images/projects/chooser.webp';
 import type { RefObject } from 'react';
 
 const PROJECTS: Project[] = [

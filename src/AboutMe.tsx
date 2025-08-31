@@ -1,6 +1,6 @@
 import { AboutMeSection, SKILLS } from './AboutMeSection';
 import backend from './images/back-end-developer.webp';
-import soft from './images/soft.png';
+import soft from './images/soft.webp';
 import react from './images/drawing.webp';
 import css from './images/css_1.webp';
 import css2 from './images/css_2.webp';
