@@ -7,6 +7,7 @@ import {
   Scripts,
 } from '@tanstack/react-router';
 import appCss from '../index.css?url';
+import '../datadog.ts';
 
 export const Route = createRootRoute({
   head: () => ({
