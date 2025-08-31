@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "type": "module",
-  "version": "0.1.0",
+  "version": "1.1.0",
   "private": true,
   "main": "index.js",
   "packageManager": "pnpm@10.5.2",

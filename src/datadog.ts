@@ -8,7 +8,7 @@ if (typeof window !== 'undefined' && import.meta.env.PROD) {
     site: 'datadoghq.com',
     service: 'frontend',
     env: 'prod',
-    version: '1.0.0',
+    version: __APP_VERSION__,
     sessionSampleRate: 100,
     sessionReplaySampleRate: 100,
     defaultPrivacyLevel: 'mask-user-input',
